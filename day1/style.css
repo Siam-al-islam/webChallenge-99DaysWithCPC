@@ -1,0 +1,25 @@
+main {
+    display: flex;
+    justify-content: center;
+
+}
+
+.color-wrapper {
+    width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.color-wrapper span {
+    color: rgb(116, 142, 0);
+}
+
+.btn-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn {
+    padding: 10px 20px;
+}
