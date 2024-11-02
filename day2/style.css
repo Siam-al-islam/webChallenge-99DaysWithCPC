@@ -1,0 +1,12 @@
+.container {
+    padding-top: 200px;
+    width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.generate-btn {
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
