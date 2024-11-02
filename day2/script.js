@@ -11,5 +11,5 @@ const getRandomColor = () => {
 
 const setRandomColor = () => {
     document.body.style.backgroundColor = getRandomColor();
-    console.log(getRandomColor())
+    console.log(getRandomColor());
 }

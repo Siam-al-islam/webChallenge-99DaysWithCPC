@@ -1,0 +1,14 @@
+.container {
+    width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 200px;
+}
+
+.count-btn {
+    font-size: 18px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 10px;
+
+}
