@@ -15,5 +15,11 @@ const decerementCount = () => {
     displayCount.innerText = count;
 }
 
+const resetCounter = () => {
+    count = 0;
+    displayCount.innerText = count;
+}
+
 increment.addEventListener('click', incrementCount);
 decerement.addEventListener('click', decerementCount);
+reset.addEventListener('click', resetCounter);
