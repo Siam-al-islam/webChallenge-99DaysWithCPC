@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 200px 20px 0px 20px;
+}
+
+.quote-wapper {
+    margin: 0 auto;
+    max-width: 600px;
+    border: 2px solid red;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.generate-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: green;
+    color: #ffffff;
+    border: 1px solid green;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.generate-btn:hover {
+    color: green;
+    border: 1px solid green;
+    background-color: white;
+}
+
+.quote-wapper p {
+    margin-top: 20px;
+    border: 1px solid rebeccapurple;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 20px;
+}
