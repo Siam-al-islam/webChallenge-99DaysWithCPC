@@ -19,8 +19,15 @@ body {
 .container input {
     height: 33px;
     padding-left: 10px;
+    font-size: 16px;
 }
 
 .container button {
     padding: 10px 20px;
+}
+
+.item {
+    font-size: 18px;
+    margin-top: 10;
+    list-style: disc;
 }
