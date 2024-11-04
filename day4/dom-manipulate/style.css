@@ -1,0 +1,26 @@
+body {
+    padding-top: 200px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    border: 2px solid green;
+    border-radius: 10px;
+    box-shadow: 5px 5px 30px green;
+    padding: 40px;
+    text-align: center;
+}
+
+.container h1 {
+    font-size: 30px;
+}
+
+.container input {
+    height: 33px;
+    padding-left: 10px;
+}
+
+.container button {
+    padding: 10px 20px;
+}
