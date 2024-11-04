@@ -7,10 +7,15 @@ function handleForm(event) { event.preventDefault(); }
 form.addEventListener('submit', handleForm);
 
 const addList = () => {
-    const newItem = document.createElement('p');
-    newItem.innerText = inputField.value;
-    itemContainer.appendChild(newItem);
-    newItem.classList.add('item')
+    if (inputField.value == "") {
+        alert("please add something");
+    }
+    else {
+        const newItem = document.createElement('p');
+        newItem.innerText = inputField.value;
+        itemContainer.appendChild(newItem);
+        newItem.classList.add('item')
+    }
     inputField.value = "";
 }
 
