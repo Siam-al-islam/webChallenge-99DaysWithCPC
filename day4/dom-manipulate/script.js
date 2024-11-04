@@ -1,6 +1,10 @@
 const inputField = document.querySelector('#input-field');
+const form = document.getElementById('form');
 const addBtn = document.querySelector('#add-btn');
 const itemContainer = document.querySelector('#list-container');
+
+function handleForm(event) { event.preventDefault(); }
+form.addEventListener('submit', handleForm);
 
 const addList = () => {
     const newItem = document.createElement('p');
