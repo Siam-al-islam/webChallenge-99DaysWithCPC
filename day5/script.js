@@ -13,11 +13,20 @@ const addList = () => {
     }
     else {
         const newItem = document.createElement('p');
+        const span = document.createElement('span');
+        span.innerHTML = '&#10006;';
         newItem.innerText = inputField.value;
         itemContainer.appendChild(newItem);
+        newItem.appendChild(span);
         newItem.classList.add('item');
     }
     inputField.value = "";
 }
+
+itemContainer.addEventListener("click", function (e) {
+    if (e.target.tagName === "SPAN") {
+        e.target.parentElement.remove();
+    }
+})
 
 addBtn.addEventListener('click', addList);
