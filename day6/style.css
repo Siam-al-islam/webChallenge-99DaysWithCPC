@@ -16,34 +16,6 @@ body {
     font-size: 30px;
 }
 
-.container input {
-    height: 33px;
-    padding-left: 10px;
-    font-size: 16px;
-    border: none;
-    outline: none;
-}
-
-.container button {
-    display: flex;
-    border: none;
-    background: transparent;
-}
-
-#list-container {
-    width: 300px;
-    margin: 0 auto;
-}
-
-.item {
-    color: green;
-    font-size: 20px;
-    font-weight: 600;
-    text-transform: capitalize;
-    margin-top: 10;
-    display: flex;
-    justify-content: space-between;
-}
 
 form {
     display: flex;
@@ -61,4 +33,41 @@ form {
 .inputWrapper svg {
     width: 20px;
     height: 20px;
+}
+
+.container input {
+    height: 33px;
+    padding-left: 10px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+}
+
+.container button {
+    display: flex;
+    border: none;
+    background: transparent;
+}
+
+#list-container {
+    padding-top: 30px;
+    width: 300px;
+    margin: 0 auto;
+}
+
+.item {
+    position: relative;
+    margin: 0;
+    color: rgb(48, 48, 48);
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list-title {
+    position: absolute;
+    margin-left: 30px;
 }
