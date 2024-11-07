@@ -1,11 +1,83 @@
-main {
-    margin: 200px auto;
-    max-width: 500px;
-    border: 2px solid salmon;
-    padding: 30px;
+body {
+    padding-top: 200px;
+    padding-bottom: 200px;
 }
 
-.input-container {
-    width: max-content;
+.container {
+    max-width: 600px;
     margin: 0 auto;
+    border: 2px solid green;
+    border-radius: 10px;
+    box-shadow: 5px 5px 30px green;
+    padding: 40px;
+    text-align: center;
+}
+
+.container h1 {
+    font-size: 30px;
+}
+
+
+form {
+    display: flex;
+    justify-content: center;
+}
+
+.inputWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid red;
+    max-width: max-content;
+}
+
+.inputWrapper svg {
+    width: 20px;
+    height: 20px;
+}
+
+.container input {
+    height: 33px;
+    padding-left: 10px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+}
+
+.container button {
+    display: flex;
+    border: none;
+    background: transparent;
+}
+
+#list-container {
+    padding-top: 30px;
+    width: 300px;
+    margin: 0 auto;
+}
+
+.item {
+    padding-top: 10px;
+    position: relative;
+    margin: 0;
+    color: rgb(48, 48, 48);
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list-title {
+    position: absolute;
+    margin-left: 30px;
+}
+
+#checkbox {
+    width: 20px;
+    height: 20px;
+    accent-color: #4CAF50;
+    border: 2px solid #4CAF50;
+    border-radius: 4px;
 }
