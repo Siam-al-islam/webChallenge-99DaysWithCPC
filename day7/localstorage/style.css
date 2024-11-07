@@ -1,0 +1,11 @@
+main {
+    margin: 200px auto;
+    max-width: 500px;
+    border: 2px solid salmon;
+    padding: 30px;
+}
+
+.input-container {
+    width: max-content;
+    margin: 0 auto;
+}
