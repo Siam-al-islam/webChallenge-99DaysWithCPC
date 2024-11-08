@@ -24,6 +24,10 @@ const addList = () => {
         doneBtn.classList.add('done-btn');
         doneBtn.innerHTML = "Done";
 
+        doneBtn.addEventListener('click', (e) => {
+            doneBtn.innerHTML = "&#10004;";
+        })
+
         doneWrapper.appendChild(span);
         doneWrapper.appendChild(doneBtn);
 
