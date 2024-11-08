@@ -11,7 +11,8 @@ const addList = () => {
         alert("Please add something");
     } else {
         const newItem = document.createElement('div');
-        const
+        const doneWrapper = document.createElement('div');
+
         const itemText = document.createElement('p');
         itemText.classList.add('list-title');
         itemText.innerText = inputField.value;
@@ -23,9 +24,12 @@ const addList = () => {
         doneBtn.classList.add('done-btn');
         doneBtn.innerHTML = "Done";
 
+        doneWrapper.appendChild(span);
+        doneWrapper.appendChild(doneBtn);
+
         newItem.appendChild(itemText);
-        newItem.appendChild(span);
-        newItem.appendChild(doneBtn);
+        newItem.appendChild(doneWrapper);
+        doneWrapper.classList.add('done-wrapper');
 
         newItem.classList.add('item');
         itemContainer.appendChild(newItem);
@@ -37,7 +41,7 @@ const addList = () => {
 
 itemContainer.addEventListener("click", (e) => {
     if (e.target.tagName === "SPAN") {
-        e.target.parentElement.remove();
+        e.target.closest('.item').remove();
         saveData();
     }
 });

@@ -65,6 +65,12 @@ form {
     margin: 0;
 }
 
+.done-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 .done-btn {
     background-color: green;
     color: white;
