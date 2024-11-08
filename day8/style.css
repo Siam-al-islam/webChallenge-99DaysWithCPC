@@ -1,0 +1,74 @@
+body {
+    padding-top: 200px;
+    padding-bottom: 200px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    border: 2px solid green;
+    border-radius: 10px;
+    box-shadow: 5px 5px 30px green;
+    padding: 40px;
+    text-align: center;
+}
+
+.container h1 {
+    font-size: 30px;
+}
+
+
+form {
+    display: flex;
+    justify-content: center;
+}
+
+.inputWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid red;
+    max-width: max-content;
+}
+
+.inputWrapper button {
+    height: 100%;
+}
+
+.container input {
+    height: 33px;
+    padding-left: 10px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+}
+
+#list-container {
+    padding-top: 30px;
+    width: 300px;
+    margin: 0 auto;
+}
+
+.item {
+    padding-top: 10px;
+    margin: 0;
+    color: rgb(48, 48, 48);
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item p {
+    margin: 0;
+}
+
+.done-btn {
+    background-color: green;
+    color: white;
+    padding: 8px 16px;
+    border: 0;
+    cursor: pointer;
+}
