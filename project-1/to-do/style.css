@@ -22,7 +22,7 @@ body {
     border: 2px solid white;
     padding: 40px;
     border-radius: 15px;
-    /* box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.2), 5px 5px 16px rgba(34, 34, 34, 0.542); */
+    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.2), 5px 5px 16px rgba(34, 34, 34, 0.542);
 }
 
 .container .title {
@@ -33,7 +33,7 @@ body {
 
 .input-wrapper {
     margin: 0 auto;
-    max-width: 400px;
+    max-width: 500px;
     padding-top: 20px;
     display: flex;
     align-items: center;
@@ -71,7 +71,30 @@ body {
 }
 
 .list-container {
+    margin: 0 auto;
+    max-width: 500px;
     margin-top: 40px;
+}
+
+.item-wrapper {
+    gap: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.list-wrapper {
+    padding: 0 16px 0 0;
+    overflow: auto;
+    max-height: calc(100vh - 400px);
+}
+
+
+.list {
+    text-transform: capitalize;
+    color: #332871;
+    font-size: 18px;
+    font-weight: 500;
+    list-style: none;
 }
 
 /* responsive */
