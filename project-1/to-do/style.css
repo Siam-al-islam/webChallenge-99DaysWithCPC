@@ -18,11 +18,9 @@ body {
 .container {
     max-width: 800px;
     margin: 0 auto;
-    background-color: #ffffff7a;
-    border: 2px solid white;
+    background-color: #ffffff84;
     padding: 40px;
     border-radius: 15px;
-    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.2), 5px 5px 16px rgba(34, 34, 34, 0.542);
 }
 
 .container .title {
@@ -77,24 +75,51 @@ body {
 }
 
 .item-wrapper {
-    gap: 10px;
+    margin-top: 10px;
     display: flex;
     align-items: center;
+    gap: 12px;
 }
 
-.list-wrapper {
+.remove-icon {
+    margin-left: auto;
+}
+
+#list-wrapper {
     padding: 0 16px 0 0;
     overflow: auto;
+    overflow-x: hidden;
     max-height: calc(100vh - 400px);
 }
 
+.check-box {
+    height: 20px;
+    width: 20px;
+    border: 2px solid #E1E1E1;
+    border-radius: 50%;
+}
 
 .list {
     text-transform: capitalize;
-    color: #332871;
     font-size: 18px;
     font-weight: 500;
     list-style: none;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+
+.checkBox-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.remove-icon {
+    color: rgb(255, 59, 59);
+    background-color: #ffffff4b;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
 }
 
 /* responsive */

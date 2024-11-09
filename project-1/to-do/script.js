@@ -16,25 +16,18 @@ const addList = () => {
     else {
         errorMsg.innerHTML = "";
 
-        const itemWrapper = document.createElement("div");
-        itemWrapper.classList.add("item-wrapper");
+        const todoCardHtml = `
+        <li class="item-wrapper">
+            <div class="checkBox-wrapper">
+                <div class="check-box"></div>
+                <span class="list"></span>
+            </div>
+            <i class="fa fa-regular fa-trash remove-icon" aria-hidden="true"></i>
+        </li>
+        `;
 
-        const checkBox = document.createElement("div");
-        checkBox.classList.add("check-box");
-
-        const remove = document.createElement("i");
-        const removeClassesToAdd = ['fa', 'fa-regular', 'fa-trash'];
-        remove.classList.add(...removeClassesToAdd);
-
-        const li = document.createElement("li");
-        li.innerText = inputField.value;
-        li.classList.add("list");
-
-        listWrapper.appendChild(itemWrapper)
-
-        itemWrapper.appendChild(checkBox);
-        itemWrapper.appendChild(li);
-        itemWrapper.appendChild(remove);
+        listWrapper.insertAdjacentHTML('afterbegin', todoCardHtml);
+        document.querySelector('.list').textContent = inputField.value;
 
         inputField.value = "";
     }
