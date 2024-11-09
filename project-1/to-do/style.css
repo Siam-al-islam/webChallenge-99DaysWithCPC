@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 100px 10px 0px 10px;
+    background-image: url("https://i.ibb.co.com/kyJd407/bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    height: 100%;
+    font-family: "Poppins", serif;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #ffffff7a;
+    border: 2px solid white;
+    padding: 40px;
+    border-radius: 15px;
+    /* box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.2), 5px 5px 16px rgba(34, 34, 34, 0.542); */
+}
+
+.container .title {
+    text-align: center;
+    font-size: 22px;
+    color: #332871;
+}
+
+.input-wrapper {
+    margin: 0 auto;
+    max-width: 400px;
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.input-wrapper input {
+    font-size: 18px;
+    padding: 10px;
+    text-align: center;
+    outline: none;
+    border: none;
+    flex: 1;
+    border-radius: 30px 0px 0px 30px;
+}
+
+.add-btn {
+    font-size: 16px;
+    right: 0;
+    padding: 12px 40px;
+    cursor: pointer;
+    background-color: #FF643B;
+    border: 0;
+    border-radius: 0 30px 30px 0px;
+    color: white;
+    font-weight: 600;
+    display: flex;
+}
+
+/* responsive */
+
+@media only screen and (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    .container .title {
+        font-size: 18px;
+    }
+
+    .input-wrapper {
+        max-width: 320px;
+    }
+
+    .input-wrapper input {
+        font-size: 14px;
+    }
+
+    .add-btn {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}
