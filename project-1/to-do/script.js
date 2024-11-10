@@ -44,6 +44,7 @@ const showData = () => {
 listWrapper.addEventListener("click", (e) => {
     if (e.target.classList.contains("remove-icon")) {
         e.target.closest(".item-wrapper").remove();
+        errorMsg.innerHTML = "1 item deleted";
         saveData();
     } else if (e.target.classList.contains("list")) {
         const checkBox = e.target.closest(".item-wrapper").querySelector(".check-box");
