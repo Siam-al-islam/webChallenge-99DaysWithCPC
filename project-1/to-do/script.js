@@ -1,5 +1,3 @@
-const { css } = require("jquery");
-
 const form = document.getElementById("form");
 
 form.addEventListener("click", (e) => {
@@ -23,7 +21,7 @@ const addList = () => {
                 <div class="checkBox-wrapper">
                     <div class="check-box"></div>
                 </div>
-                <span onclick=${checkList()} class="list"></span>
+                <span class="list"></span>
                 <i id="removeIcon" class="fa fa-regular fa-trash remove-icon" aria-hidden="true"></i>
             </li>
         `;
@@ -35,14 +33,18 @@ const addList = () => {
         removeIcon.addEventListener("click", (e) => {
             e.target.closest(".item-wrapper").remove();
         });
-
-        todoCardHtml.addEventListener("click", () => {
-
-        })
     }
 
+    const list = document.querySelector(".list");
+    list.addEventListener("click", (e) => {
+        const checkBox = document.querySelector(".check-box");
+        e.target.closest("").classList.toggle("checked");
+        console.log(e);
+    });
 
     inputField.value = "";
 }
+
+
 
 addBtn.addEventListener("click", addList);
