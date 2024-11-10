@@ -2,7 +2,7 @@ const form = document.getElementById("form");
 
 form.addEventListener("click", (e) => {
     e.preventDefault();
-})
+});
 
 const inputField = document.querySelector("#input-field");
 const addBtn = document.querySelector("#addBtn");
@@ -12,8 +12,7 @@ const listWrapper = document.querySelector("#list-wrapper");
 const addList = () => {
     if (inputField.value == "") {
         errorMsg.innerHTML = "Please write a task";
-    }
-    else {
+    } else {
         errorMsg.innerHTML = "";
 
         const todoCardHtml = `
@@ -21,29 +20,48 @@ const addList = () => {
                 <div class="checkBox-wrapper">
                     <div class="check-box"></div>
                 </div>
-                <span class="list"></span>
-                <i id="removeIcon" class="fa fa-regular fa-trash remove-icon" aria-hidden="true"></i>
+                <span class="list">${inputField.value}</span>
+                <i class="fa fa-trash remove-icon" aria-hidden="true"></i>
             </li>
         `;
 
         listWrapper.insertAdjacentHTML('afterbegin', todoCardHtml);
-        document.querySelector('.list').textContent = inputField.value;
 
-        const removeIcon = document.querySelector("#removeIcon");
-        removeIcon.addEventListener("click", (e) => {
-            e.target.closest(".item-wrapper").remove();
-        });
+        attachEventListeners();
+        inputField.value = "";
+        saveData();
     }
-
-    const list = document.querySelector(".list");
-    list.addEventListener("click", (e) => {
-        const checkBox = e.target.closest(".item-wrapper").querySelector(".check-box");
-        checkBox.classList.toggle("checked");
-    });
-
-    inputField.value = "";
-}
-
-
+};
 
 addBtn.addEventListener("click", addList);
+
+const saveData = () => {
+    localStorage.setItem("data", listWrapper.innerHTML);
+};
+
+const showData = () => {
+    listWrapper.innerHTML = localStorage.getItem("data");
+    attachEventListeners();
+};
+
+const attachEventListeners = () => {
+    const removeIcons = listWrapper.querySelectorAll(".remove-icon");
+    removeIcons.forEach((removeIcon) => {
+        removeIcon.addEventListener("click", (e) => {
+            e.target.closest(".item-wrapper").remove();
+            saveData();
+        });
+    });
+
+    const lists = listWrapper.querySelectorAll(".list");
+    lists.forEach((list) => {
+        list.addEventListener("click", (e) => {
+            const checkBox = e.target.closest(".item-wrapper").querySelector(".check-box");
+            checkBox.classList.toggle("checked");
+            list.classList.toggle("list-checked");
+            saveData();
+        });
+    });
+};
+
+showData();
