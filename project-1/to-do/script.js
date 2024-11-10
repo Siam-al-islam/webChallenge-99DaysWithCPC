@@ -37,9 +37,8 @@ const addList = () => {
 
     const list = document.querySelector(".list");
     list.addEventListener("click", (e) => {
-        const checkBox = document.querySelector(".check-box");
-        e.target.closest("").classList.toggle("checked");
-        console.log(e);
+        const checkBox = e.target.closest(".item-wrapper").querySelector(".check-box");
+        checkBox.classList.toggle("checked");
     });
 
     inputField.value = "";
