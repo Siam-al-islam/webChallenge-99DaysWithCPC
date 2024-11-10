@@ -10,7 +10,7 @@ let errorMsg = document.querySelector("#error");
 const listWrapper = document.querySelector("#list-wrapper");
 
 const addList = () => {
-    if (inputField.value == "") {
+    if (inputField.value === "") {
         errorMsg.innerHTML = "Please write a task";
     } else {
         errorMsg.innerHTML = "";
@@ -26,8 +26,6 @@ const addList = () => {
         `;
 
         listWrapper.insertAdjacentHTML('afterbegin', todoCardHtml);
-
-        attachEventListeners();
         inputField.value = "";
         saveData();
     }
@@ -40,28 +38,19 @@ const saveData = () => {
 };
 
 const showData = () => {
-    listWrapper.innerHTML = localStorage.getItem("data");
-    attachEventListeners();
+    listWrapper.innerHTML = localStorage.getItem("data") || '';
 };
 
-const attachEventListeners = () => {
-    const removeIcons = listWrapper.querySelectorAll(".remove-icon");
-    removeIcons.forEach((removeIcon) => {
-        removeIcon.addEventListener("click", (e) => {
-            e.target.closest(".item-wrapper").remove();
-            saveData();
-        });
-    });
-
-    const lists = listWrapper.querySelectorAll(".list");
-    lists.forEach((list) => {
-        list.addEventListener("click", (e) => {
-            const checkBox = e.target.closest(".item-wrapper").querySelector(".check-box");
-            checkBox.classList.toggle("checked");
-            list.classList.toggle("list-checked");
-            saveData();
-        });
-    });
-};
+listWrapper.addEventListener("click", (e) => {
+    if (e.target.classList.contains("remove-icon")) {
+        e.target.closest(".item-wrapper").remove();
+        saveData();
+    } else if (e.target.classList.contains("list")) {
+        const checkBox = e.target.closest(".item-wrapper").querySelector(".check-box");
+        checkBox.classList.toggle("checked");
+        e.target.classList.toggle("list-checked");
+        saveData();
+    }
+});
 
 showData();

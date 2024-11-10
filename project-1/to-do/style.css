@@ -137,6 +137,13 @@ body {
     text-decoration: line-through;
 }
 
+footer p {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.749);
+}
+
 /* responsive */
 
 @media only screen and (max-width: 600px) {
