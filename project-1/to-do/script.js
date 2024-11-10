@@ -25,7 +25,7 @@ const addList = () => {
             </li>
         `;
 
-        listWrapper.insertAdjacentHTML('afterbegin', todoCardHtml);
+        listWrapper.insertAdjacentHTML('beforeend', todoCardHtml);
         inputField.value = "";
         saveData();
     }
