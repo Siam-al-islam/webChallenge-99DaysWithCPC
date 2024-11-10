@@ -1,3 +1,5 @@
+const { css } = require("jquery");
+
 const form = document.getElementById("form");
 
 form.addEventListener("click", (e) => {
@@ -17,20 +19,30 @@ const addList = () => {
         errorMsg.innerHTML = "";
 
         const todoCardHtml = `
-        <li class="item-wrapper">
-            <div class="checkBox-wrapper">
-                <div class="check-box"></div>
-                <span class="list"></span>
-            </div>
-            <i class="fa fa-regular fa-trash remove-icon" aria-hidden="true"></i>
-        </li>
+            <li class="item-wrapper">
+                <div class="checkBox-wrapper">
+                    <div class="check-box"></div>
+                </div>
+                <span onclick=${checkList()} class="list"></span>
+                <i id="removeIcon" class="fa fa-regular fa-trash remove-icon" aria-hidden="true"></i>
+            </li>
         `;
 
         listWrapper.insertAdjacentHTML('afterbegin', todoCardHtml);
         document.querySelector('.list').textContent = inputField.value;
 
-        inputField.value = "";
+        const removeIcon = document.querySelector("#removeIcon");
+        removeIcon.addEventListener("click", (e) => {
+            e.target.closest(".item-wrapper").remove();
+        });
+
+        todoCardHtml.addEventListener("click", () => {
+
+        })
     }
+
+
+    inputField.value = "";
 }
 
 addBtn.addEventListener("click", addList);

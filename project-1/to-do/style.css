@@ -106,12 +106,14 @@ body {
     list-style: none;
     word-wrap: break-word;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .checkBox-wrapper {
     display: flex;
     align-items: center;
     gap: 20px;
+    cursor: pointer;
 }
 
 .remove-icon {
@@ -120,6 +122,10 @@ body {
     padding: 10px;
     border-radius: 50%;
     cursor: pointer;
+}
+
+.list-click {
+    text-decoration: line-through;
 }
 
 /* responsive */
