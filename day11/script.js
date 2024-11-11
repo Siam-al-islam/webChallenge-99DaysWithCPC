@@ -10,5 +10,9 @@ const length = document.getElementById("length");
 // fruitsNames.splice(2, 0, "add")
 const concatedArray = fruitsNames.concat(fruitsNames2)
 
+concatedArray.forEach((name) => {
+    console.log(name);
+})
+
 length.innerHTML = concatedArray.length;
 fruit.innerHTML = concatedArray;
