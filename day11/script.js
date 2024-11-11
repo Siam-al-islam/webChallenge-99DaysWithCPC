@@ -1,8 +1,14 @@
-const names = ['siam', 'sakib', 'saif', 'salman'];
-const eachName = document.getElementById("name");
+const fruitsNames = ['Apple', 'Banana', 'Mango', 'Goava'];
+const fruitsNames2 = ['Orange', 'Pine-apple'];
+
+const fruit = document.getElementById("name");
 const length = document.getElementById("length");
 
-names.push("robi", "rasel");
+// fruitsNames.push("Orange", "Pine-Apple");
+// fruitsNames.shift()
 
-eachName.innerHTML = names;
-length.innerHTML = names.length;
+// fruitsNames.splice(2, 0, "add")
+const concatedArray = fruitsNames.concat(fruitsNames2)
+
+length.innerHTML = concatedArray.length;
+fruit.innerHTML = concatedArray;
