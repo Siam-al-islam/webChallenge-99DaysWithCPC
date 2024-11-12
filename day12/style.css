@@ -8,9 +8,11 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 10px;
+    border: 2px solid green;
 }
 
 .item {
+    text-align: center;
     border: 1px solid red;
     padding: 10px;
 }

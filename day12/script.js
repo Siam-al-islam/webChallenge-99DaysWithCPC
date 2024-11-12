@@ -13,3 +13,18 @@ for (let i = 0; i < names.length; i++) {
     p.innerText = names[i];
     container.appendChild(p);
 }
+
+names.forEach((name) => {
+    const nameHtml = `
+        <p class="item">${name}</p>
+    `;
+    container.insertAdjacentHTML("afterbegin", nameHtml);
+})
+
+for (name of names) {
+    const nameText =
+        `
+    <p class="item">${name}</p>
+    `;
+    container.insertAdjacentHTML("afterbegin", nameText)
+}
