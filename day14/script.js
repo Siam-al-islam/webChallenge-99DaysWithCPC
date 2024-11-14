@@ -17,7 +17,7 @@ const info = [
     {
         name: "Tanjim Siddik Rion",
         age: 21,
-        salary: 5000
+        salary: 5000000
     }
 ];
 
@@ -27,17 +27,14 @@ info.forEach((person)=> {
   const name = person.name;
   const age = person.age;
   const salary = person.salary;
-  // const h2 = document.createElement("h2");
-  // h2.innerText = name;
-  // container.appendChild(h2);
+
   const html = `
-    <div>
-      <h3>${name}</h3>
-      <p></p>
-      <p></p>
+    <div class="info-container">
+      <p>${name}</p>
+      <p>${age}</p>
+      <p>${salary}</p>
     </div>
-  `
+  `;
+  
+  container.insertAdjacentHTML("afterend", html)
 })
-
-// console.log(info);
-

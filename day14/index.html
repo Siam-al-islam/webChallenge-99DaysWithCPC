@@ -1,43 +1,21 @@
-const info = [
-    {
-        name: "Zayed khan",
-        age: 21,
-        salary: 1000000
-    },
-    {
-        name: "Siam Al Islam",
-        age: 20,
-        salary: 500000
-    },
-    {
-        name: "Khan Mahin",
-        age: 30,
-        salary: 13000000
-    },
-    {
-        name: "Tanjim Siddik Rion",
-        age: 21,
-        salary: 5000
-    }
-];
-
-const container = document.getElementById("container");
-
-info.forEach((person)=> {
-  const name = person.name;
-  const age = person.age;
-  const salary = person.salary;
-  // const h2 = document.createElement("h2");
-  // h2.innerText = name;
-  // container.appendChild(h2);
-  const html = `
-    <div>
-      <h3>${name}</h3>
-      <p></p>
-      <p></p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <h1>Welcome to Array object.....</h1>
+    <div id="container">
+      <div class="info-container">
+        <p>Name</p>
+        <p>Age</p>
+        <p>Salary</p>
+      </div>
     </div>
-  `
-})
 
-// console.log(info);
-
+    <script src="script.js"></script>
+</body>
+</html>
