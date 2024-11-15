@@ -1,16 +1,25 @@
 const btn100 = document.querySelector("#btn100");
 const btn300 = document.querySelector("#btn300");
 const btn500 = document.querySelector("#btn500");
-const text = document.querySelector("#text");
+const textElement = document.querySelector("#text");
 
 const addHundrade = () => {
-    text.innerHTML = 200;
+    textElement.innerHTML = 200;
 }
 
 const addThreeHundrade = () => {
-    text.innerHTML = 300;
+    let text = textElement.innerHTML;
+    let intText = parseInt(text);
+    intText = intText + 300;
+    textElement.textContent = intText;
+    console.log(intText);
 }
+
 const addFiveHundrade = () => {
-    text.innerHTML = 500;
+    let text = textElement.innerHTML;
+    let intText = parseInt(text);
+    intText = intText + 500;
+    textElement.textContent = intText;
+    console.log(intText);
 }
 
