@@ -34,8 +34,8 @@
             <div class="memory-wrapper">
                 <h2>Memory</h2>
                 <div class="btn-wrapper">
-                    <button>8GB RAM</button>
-                    <button>16GB RAM</button>
+                    <button onclick="removeExtraMemory()">8GB RAM</button>
+                    <button onclick="addExtraMemory()">16GB RAM</button>
                 </div>
             </div>
             <div class="storage-wrapper">
@@ -60,7 +60,7 @@
                 </div>
                 <div class="cost-row">
                     <p>16GB Memory Cost</p>
-                    <p>0$</p>
+                    <p><span id="extra-memory">0</span>$</p>
                 </div>
                 <div class="cost-row">
                     <p>512GB Storage Cost</p>
@@ -76,11 +76,13 @@
                 </div>
                 <div class="cost-row border">
                     <p>Total</p>
-                    <p>1199$</p>
+                    <p><span id="total-price">1199</span>$</p>
                 </div>
             </div>
         </div>
     </section>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
