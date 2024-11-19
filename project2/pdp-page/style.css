@@ -197,6 +197,18 @@ body {
     color: green;
 }
 
+.bagBtn {
+    float: right;
+    margin-top: 30px;
+    background-color: #4DA674;
+    padding: 12px 20px;
+    color: white;
+    font-weight: 600;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
 @media only screen and (max-width: 700px) {
     .product-section {
         flex-direction: column;
