@@ -28,7 +28,7 @@ body {
     margin: 0 auto;
 }
 
-.discount-wrapper {
+.coupon-wrapper {
     background-image: linear-gradient(rgba(255, 188, 188, 0.323), rgba(214, 214, 255, 0.254));
     text-align: center;
     color: rgb(0, 0, 0);
@@ -38,15 +38,15 @@ body {
     box-shadow: 2px 2px 10px rgba(56, 56, 56, 0.459);
 }
 
-.discount-wrapper h2 {
+.coupon-wrapper h2 {
     font-size: 24px;
 }
 
-.discount-wrapper p {
+.coupon-wrapper p {
     font-size: 14px;
 }
 
-.discount-wrapper .discount {
+.coupon-wrapper .coupon {
     font-size: 20px;
     background-image: linear-gradient(red, blue);
     color: transparent;
