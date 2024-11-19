@@ -11,10 +11,13 @@ let isStorage512Added = false;
 let isStorage1TBAdded = false;
 let isPaidDeliverySelected = false;
 
+let memoryMessage = document.querySelector("#memory-message");
+
 const addExtraMemory = () => {
     if (!isMemoryAdded) {
         extraMemory.innerHTML = 200;
         totalPrice.innerHTML = parseInt(totalPrice.innerHTML) + 200;
+        memoryMessage.innerHTML = "16GB RAM Added to the Cart";
         isMemoryAdded = true;
     }
 };
@@ -23,6 +26,7 @@ const removeExtraMemory = () => {
     if (isMemoryAdded) {
         extraMemory.innerHTML = 0;
         totalPrice.innerHTML = parseInt(totalPrice.innerHTML) - 200;
+        memoryMessage.innerHTML = "8GB RAM Added to the Cart";
         isMemoryAdded = false;
     }
 };
