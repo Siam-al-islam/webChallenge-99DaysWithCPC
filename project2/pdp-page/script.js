@@ -2,6 +2,9 @@ let extraMemory = document.querySelector("#extra-memory");
 let totalPrice = document.querySelector("#total-price");
 let storage512 = document.querySelector("#storage512-gb");
 let storage1TB = document.querySelector("#storage1tb");
+let deliveryCost = document.querySelector("#delivery-cost");
+let couponInput = document.querySelector("#coupon-input");
+let applyBtn = document.querySelector("#apply-btn");
 
 let isMemoryAdded = false;
 let isStorage512Added = false;
@@ -67,6 +70,7 @@ const toggle1TBStorage = () => {
 
 const selectFreeDelivery = () => {
     if (isPaidDeliverySelected) {
+        deliveryCost.innerHTML = 0;
         totalPrice.innerHTML = parseInt(totalPrice.innerHTML) - 20;
         isPaidDeliverySelected = false;
     }
@@ -74,7 +78,28 @@ const selectFreeDelivery = () => {
 
 const selectPaidDelivery = () => {
     if (!isPaidDeliverySelected) {
+        deliveryCost.innerHTML = 20;
         totalPrice.innerHTML = parseInt(totalPrice.innerHTML) + 20;
         isPaidDeliverySelected = true;
     }
 };
+
+const success = document.querySelector("#success");
+const error = document.querySelector("#error");
+const discountedTotalPrice = document.querySelector("#discounted-total");
+
+const handleApplyBtn = () => {
+    if (couponInput.value === "MAC10") {
+        const discountPrice = parseInt(totalPrice.innerHTML) * 10 / 100;
+        const discountedTotal = parseInt(totalPrice.innerHTML) - Math.floor(discountPrice);
+        discountedTotalPrice.innerHTML = discountedTotal;
+        document.querySelector("#hidden").style.display = "flex";
+        success.innerHTML = "Congraulations!!🎉.You got 10% discount!";
+        error.innerHTML = "";
+        applyBtn.setAttribute("disabled", "disabled");
+    }
+    else {
+        error.innerHTML = "Invalid Coupon!";
+        success.innerHTML = "";
+    }
+}
