@@ -39,9 +39,16 @@ const toggle512GBStorage = () => {
 };
 
 const removeExtraStorage = () => {
-    storage512.innerHTML = 0;
-    totalPrice.innerHTML = parseInt(totalPrice.innerHTML) - 220;
-    isStorage512Added = false;
+    if (isStorage512Added) {
+        storage512.innerHTML = 0;
+        totalPrice.innerHTML = parseInt(totalPrice.innerHTML) - 220;
+        isStorage512Added = false;
+    }
+    else if (isStorage1TBAdded) {
+        storage1TB.innerHTML = 0;
+        totalPrice.innerHTML = parseInt(totalPrice.innerHTML) - 400;
+        isStorage1TBAdded = false;
+    }
 };
 
 const toggle1TBStorage = () => {
