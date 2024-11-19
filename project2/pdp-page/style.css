@@ -5,7 +5,7 @@
 
 body {
     font-family: "Poppins", serif;
-    padding: 12px;
+    padding: 14px;
 }
 
 .product-section {
@@ -18,10 +18,39 @@ body {
 
 .image-wrapper {
     box-sizing: border-box;
+    display: flex;
+    height: max-content;
+    flex-direction: column;
 }
 
 .image {
     max-width: 400px;
+    margin: 0 auto;
+}
+
+.discount-wrapper {
+    background-image: linear-gradient(rgba(255, 188, 188, 0.323), rgba(214, 214, 255, 0.254));
+    text-align: center;
+    color: rgb(0, 0, 0);
+    border: 1px solid rgba(124, 124, 124, 0.364);
+    border-radius: 14px;
+    padding: 10px;
+    box-shadow: 2px 2px 10px rgba(56, 56, 56, 0.459);
+}
+
+.discount-wrapper h2 {
+    font-size: 24px;
+}
+
+.discount-wrapper p {
+    font-size: 14px;
+}
+
+.discount-wrapper .discount {
+    font-size: 20px;
+    background-image: linear-gradient(red, blue);
+    color: transparent;
+    background-clip: text;
 }
 
 .details-wrapper .title {
