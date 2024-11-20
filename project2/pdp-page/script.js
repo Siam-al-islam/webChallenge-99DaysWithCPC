@@ -107,3 +107,13 @@ const handleApplyBtn = () => {
         success.innerHTML = "";
     }
 }
+
+const bagBtn = document.querySelector(".bagBtn");
+const modal = document.querySelector(".modal");
+bagBtn.addEventListener("click", () => {
+    modal.style.display = "block";
+})
+
+const handleContinue = () => {
+    modal.style.display = "none";
+}
