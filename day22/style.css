@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+#title {
+    text-align: center;
+    max-width: 600px;
+    margin: 50px auto;
+}
+
+#title h1 {
+    font-size: 32px;
+}
+
+#title p {
+    margin-top: 10px;
+}
