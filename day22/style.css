@@ -21,3 +21,33 @@ section {
 #title p {
     margin-top: 10px;
 }
+
+.item-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+
+.item {
+    max-width: 100%;
+    border: 1px solid blue;
+    padding: 15px;
+    border-radius: 15px;
+    margin: 0 auto;
+}
+
+.item img {
+    width: 300px;
+}
+
+.ingredients {
+    display: flex;
+    gap: 8px;
+}
+
+.ingredients p {
+    border: 1px solid red;
+    padding: 4px;
+    border-radius: 15px;
+}
