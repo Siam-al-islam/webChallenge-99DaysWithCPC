@@ -1,16 +1,16 @@
-var myFunc = function (a, b) {
-    console.log("hello ".concat(a, " ").concat(b));
+"use strict";
+const myFunc = (a, b) => {
+    console.log(`hello ${a} ${b}`);
 };
 myFunc('Siam', 'Bro');
 // optinal param 
-var myOptFunc = function (a, b, c) {
-    if (c === void 0) { c = "Hey"; }
+const myOptFunc = (a, b, c = "Hey") => {
     console.log(c);
-    console.log("hello ".concat(a, " ").concat(b));
+    console.log(`hello ${a} ${b}`);
 };
 myOptFunc('Siam', 'Bro');
 // void return 
-var myNewFunc = function (a, b) {
+const myNewFunc = (a, b) => {
     return a + b;
 };
 myNewFunc(4, 5);
