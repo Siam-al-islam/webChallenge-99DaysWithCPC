@@ -9,15 +9,19 @@ const fetchData = async () => {
             const container = document.querySelector(".container");
             const htmlStr = `
             <div class="card">
-                <h2>Title: </h2>
-                <p>Post ID: </p>
-                <p>UserID: </p>
-                <p>Body: </p>
+                <h2>Title: ${post.title}</h2>
+                <p>Post ID: ${post.id}</p>
+                <p>UserID: ${post.userId}</p>
+                <p>Body: ${post.body}</p>
             </div>
             `;
 
-            container.insertAdjacentHTML("afterbegin", htmlStr);
+            container.insertAdjacentHTML("beforeend", htmlStr);
         });
+    }
+
+    else {
+        console.log("data not found");
     }
 }
 
