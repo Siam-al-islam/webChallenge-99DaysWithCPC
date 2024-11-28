@@ -5,13 +5,22 @@
 }
 
 body {
-    background-image: url("https://i.ibb.co/pPHXp7S/bg-weather.png");
+    background-image: url("https://i.ibb.co.com/jyPSVrn/14105.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
     font-family: "Poppins", serif;
     overflow: hidden;
+}
+
+.title {
+    background-color: rgba(0, 0, 0, 0.227);
+    width: max-content;
+    padding: 8px 20px;
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+    cursor: pointer;
 }
 
 main {
@@ -43,7 +52,6 @@ main {
 
 .weather-wrapper {
     display: flex;
-    /* justify-content: flex-end; */
     align-items: center;
     gap: 16px;
 }
