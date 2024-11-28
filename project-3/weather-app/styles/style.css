@@ -12,6 +12,7 @@ body {
     background-attachment: fixed;
     font-family: "Poppins", serif;
     overflow: hidden;
+    padding: 0 12px;
 }
 
 .title {
@@ -40,7 +41,6 @@ main {
     display: flex;
     flex-direction: column;
     flex: 2;
-    padding: 10px;
 }
 
 .weather-section {
@@ -163,7 +163,6 @@ input:focus {
         background-attachment: fixed;
         font-family: "Poppins", serif;
         overflow: auto;
-        padding: 0 12px;
     }
 
     main {
