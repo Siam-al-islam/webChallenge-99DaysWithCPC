@@ -68,8 +68,6 @@ main {
     flex: 1;
 }
 
-.search-container {}
-
 .search-container .search-wrapper {
     backdrop-filter: blur(8px);
     height: 100%;
@@ -143,4 +141,58 @@ input:focus {
     margin-top: 30px;
     border-top: 2px solid #ffffff8b;
     padding-top: 30px;
+}
+
+
+/* responsive design  */
+
+@media only screen and (max-width: 900px) {
+    body {
+        background-image: url("https://i.ibb.co.com/dcpq67s/bg-weather-1.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        font-family: "Poppins", serif;
+        overflow: auto;
+        padding: 0 12px;
+    }
+
+    main {
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+
+    .celcius-wrapper h1 {
+        font-size: 64px;
+    }
+
+    .location-wrapper h1 {
+        font-size: 30px;
+    }
+
+    .location-wrapper p {
+        font-size: 10px;
+    }
+
+    .weather-wrapper {
+        margin-top: 50px;
+    }
+
+    .weather-wrapper svg {
+        height: 40px;
+        width: 40px;
+    }
+
+    .weather-section {
+        padding-bottom: 0px
+    }
+
+    .search-wrapper {
+        font-size: 14px;
+    }
 }
