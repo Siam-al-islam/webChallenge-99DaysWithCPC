@@ -2,10 +2,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: 1s;
 }
 
 body {
-    /* padding-top: 50px; */
     background-image: url("https://i.ibb.co/pPHXp7S/bg-weather.png");
     background-repeat: no-repeat;
     background-position: center;
@@ -17,19 +17,29 @@ body {
 
 main {
     display: flex;
+    gap: 12px;
     max-width: 1280px;
     margin: 0 auto;
-    border: 2px solid white;
     color: #ffffff;
     height: 100vh;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .container {
-    border: 1px solid red;
+    border-right: 4px solid rgba(255, 255, 255, 0.238);
     height: 100%;
     display: flex;
     flex-direction: column;
     flex: 2;
+    padding: 10px;
+}
+
+.weather-section {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    padding-bottom: 120px;
 }
 
 .weather-wrapper {
@@ -53,6 +63,50 @@ main {
     font-size: 18px;
 }
 
+/* search-container */
+
 .search-container {
     flex: 1;
+}
+
+.search-container {}
+
+.search-container .search-wrapper {
+    backdrop-filter: blur(8px);
+    height: 100%;
+    background-color: #ffffff1e;
+    border-radius: 16px;
+    padding: 35px;
+
+}
+
+.search-wrapper .input-wrapper {
+    display: flex;
+    border-bottom: 1px solid #ffffff8b;
+    width: fit-content;
+}
+
+.search-wrapper .input-wrapper input {
+    height: 40px;
+    font-size: 18px;
+    background-color: transparent;
+    color: white;
+    border: 0;
+}
+
+.input-wrapper input::placeholder {
+    color: #ffffff97;
+    opacity: 1;
+}
+
+.input-wrapper,
+input:focus {
+    outline: none;
+}
+
+.search-wrapper .input-wrapper button {
+    background-color: transparent;
+    cursor: pointer;
+    border: 0;
+    padding: 0 10px;
 }
