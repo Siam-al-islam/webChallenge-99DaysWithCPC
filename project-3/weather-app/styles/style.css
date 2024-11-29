@@ -50,6 +50,12 @@ main {
     padding-bottom: 120px;
 }
 
+.weather-section .message {
+    margin-top: 12px;
+    color: #ffffffce;
+    font-size: 14px;
+}
+
 .weather-wrapper {
     display: flex;
     align-items: center;
@@ -241,6 +247,14 @@ input:focus {
         margin-top: 40px;
         gap: 10px;
         flex-direction: column;
+    }
+
+    .weather-section .message {
+        margin-top: 18px;
+        color: #ffffffce;
+        font-size: 10px;
+        text-align: center;
+        backdrop-filter: blur(5px);
     }
 
     .cityNameIcon-wrapper {
