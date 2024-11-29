@@ -70,6 +70,10 @@ main {
     font-size: 18px;
 }
 
+#weatherIcon {
+    width: 100px;
+}
+
 /* search-container */
 
 .search-container {
@@ -184,6 +188,10 @@ input:focus {
 
     .location-wrapper p {
         font-size: 10px;
+    }
+
+    #weatherIcon {
+        width: 40px;
     }
 
     .weather-wrapper {
