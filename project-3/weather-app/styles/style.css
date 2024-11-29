@@ -70,6 +70,12 @@ main {
     font-size: 18px;
 }
 
+.cityNameIcon-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
 #weatherIcon {
     width: 100px;
 }
@@ -165,6 +171,25 @@ input:focus {
 
 /* responsive design  */
 
+@media only screen and (max-width: 1080px) {
+    .celcius-wrapper h1 {
+        font-size: 100px;
+    }
+
+    .location-wrapper h1 {
+        font-size: 40px;
+    }
+
+    .location-wrapper p {
+        font-size: 16px;
+    }
+
+    #weatherIcon {
+        width: 60px;
+    }
+
+}
+
 @media only screen and (max-width: 900px) {
     body {
         background-image: url("https://i.ibb.co.com/dcpq67s/bg-weather-1.png");
@@ -181,12 +206,16 @@ input:focus {
         height: 100%;
     }
 
+    .container {
+        border: none;
+    }
+
     .title {
         font-size: 20px;
     }
 
     .celcius-wrapper h1 {
-        font-size: 64px;
+        font-size: 50px;
     }
 
     .location-wrapper h1 {
@@ -194,7 +223,7 @@ input:focus {
     }
 
     .location-wrapper p {
-        font-size: 10px;
+        font-size: 14px;
     }
 
     #weatherIcon {
@@ -202,19 +231,30 @@ input:focus {
     }
 
     .weather-wrapper {
-        margin-top: 50px;
+        margin-top: 40px;
+        gap: 10px;
+        flex-direction: column;
     }
 
-    .weather-wrapper svg {
-        height: 40px;
-        width: 40px;
+    .cityNameIcon-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 16px;
     }
 
     .weather-section {
         padding-bottom: 0px
     }
 
+    .search-container {
+        margin-top: 22px;
+    }
+
     .search-wrapper {
         font-size: 14px;
+    }
+
+    .input-wrapper input {
+        width: 100%;
     }
 }
