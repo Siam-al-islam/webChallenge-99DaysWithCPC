@@ -26,6 +26,7 @@ const getWeatherData = async (city) => {
     document.querySelector("#humidity").innerHTML = res.main?.humidity ? res.main.humidity : "Not Found";
     document.querySelector("#sea-level").innerHTML = res.main?.sea_level ? res.main.sea_level : "Not Found";
     document.querySelector("#wind-speed").innerHTML = res.wind?.speed ? res.wind.speed : "Not Found";
+    document.querySelector(".weather-info").innerHTML = res.weather?.[0].description ? res.weather?.[0].description : "No info found";
 
     const weatherIcon = document.querySelector("#weatherIcon");
 

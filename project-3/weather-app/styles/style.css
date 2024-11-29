@@ -168,6 +168,13 @@ input:focus {
     padding-top: 30px;
 }
 
+.copyright {
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
 
 /* responsive design  */
 
