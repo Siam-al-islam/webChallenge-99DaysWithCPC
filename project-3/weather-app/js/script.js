@@ -15,7 +15,6 @@ const getWeatherData = async (city) => {
     }
 
     const res = await data.json();
-    console.log(res);
 
     document.querySelector("#temp").innerHTML = res.main?.temp ? Math.round(res.main.temp) : "__";
     document.querySelector("#city-name").innerHTML = res.name ? res.name : res.message;
