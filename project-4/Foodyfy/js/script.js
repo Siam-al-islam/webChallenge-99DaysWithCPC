@@ -1,6 +1,7 @@
 const searchField = document.querySelector("#search-navbar");
 const cardContainer = document.querySelector("#card-container");
 const form = document.getElementById("form");
+const container = document.querySelector("#container");
 
 const getRecipes = async (query) => {
     const data = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`);
@@ -9,10 +10,10 @@ const getRecipes = async (query) => {
 
     res.meals.forEach(meal => {
         const htmlStr = `
-        <div class="max-w-[485px] rounded-2xl shadow-2xl">
+        <div class="max-w-[485px] rounded-2xl shadow-2xl pb-8">
             <img class="rounded-t-2xl h-[333px] w-full object-cover" src="${meal.strMealThumb ? meal.strMealThumb : "https://i.ibb.co.com/KG5kHnx/image-not-found-scaled.png"}"
             alt="">
-            <div class="flex items-center justify-between mt-4 px-6 pb-10">
+            <div class="flex items-center justify-between mt-4 px-6">
                 <div>
                     <h2 class="text-xl md:text-3xl font-bold">${meal.strMeal.substring(0, 15) + "..."}</h2>
                     <button
@@ -31,18 +32,28 @@ const getRecipes = async (query) => {
                         </svg>
                         <span>4.9</span>
                     </div>
-                    <h3 class="text-xl font-semibold mt-4">$<span>15.00</span></h3>
+                </div>
+            </div>
+            <div class="px-6 mt-8">
+                <h2 class="font-medium">Ingredients:</h2>
+                <div class="flex gap-2 flex-wrap mt-3">
+                    <p class="text-xs font-semibold bg-orange-200 px-2 py-1 rounded-xl">${meal.strIngredient1}</p>
+                    <p class="text-xs font-semibold bg-orange-200 px-2 py-1 rounded-xl">${meal.strIngredient2}</p>
+                    <p class="text-xs font-semibold bg-orange-200 px-2 py-1 rounded-xl">${meal.strIngredient3}</p>
+                    <p class="text-xs font-semibold bg-orange-200 px-2 py-1 rounded-xl">${meal.strIngredient4}</p>
+                    <p class="text-xs font-semibold bg-orange-200 px-2 py-1 rounded-xl">${meal.strIngredient5}</p>
                 </div>
             </div>
         </div>
         `;
         cardContainer.insertAdjacentHTML('afterbegin', htmlStr);
-
     });
 }
 
 form.addEventListener("submit", (e) => {
+    cardContainer.innerHTML = '';
     e.preventDefault();
     const searchInput = searchField.value.trim();
     getRecipes(searchInput);
+    container.classList.add('hidden');
 })
