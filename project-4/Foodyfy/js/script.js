@@ -8,9 +8,8 @@ const getRecipes = async (query) => {
     const res = await data.json();
     console.log(res);
 
-    if (res) {
-        res.meals.forEach(meal => {
-            const htmlStr = `
+    res.meals.forEach(meal => {
+        const htmlStr = `
             <div class="max-w-[485px] rounded-2xl shadow-2xl pb-8">
                 <img class="rounded-t-2xl h-[333px] w-full object-cover" src="${meal.strMealThumb ? meal.strMealThumb : "https://i.ibb.co.com/KG5kHnx/image-not-found-scaled.png"}"
                 alt="">
@@ -47,17 +46,18 @@ const getRecipes = async (query) => {
                 </div>
             </div>
             `;
-            cardContainer.insertAdjacentHTML('afterbegin', htmlStr);
-        });
-    }
-
+        cardContainer.insertAdjacentHTML('afterbegin', htmlStr);
+    });
 }
 
 forms.forEach(form => {
     form.addEventListener("submit", (e) => {
         cardContainer.innerHTML = '';
         e.preventDefault();
-        const searchInput = searchField.value.trim();
+        console.log(form);
+        const searchInputElem = form.querySelector("#search-navbar");
+        const searchInput = searchInputElem.value.trim();
+        console.log(searchInput);
         getRecipes(searchInput);
         container.classList.add('hidden');
     })
