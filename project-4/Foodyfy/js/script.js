@@ -45,7 +45,6 @@ showRecipes()
 const getRecipes = async (query) => {
     const data = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`);
     const res = await data.json();
-    console.log(res);
 
     if (!res.meals) {
         const htmlStr = `
@@ -132,7 +131,6 @@ forms.forEach(form => {
                     </button>
                     </div>
                 </div>`;
-            // toastContainer.classList.add("absolute")
             document.body.appendChild(toastContainer.firstElementChild);
 
             setTimeout(() => {
