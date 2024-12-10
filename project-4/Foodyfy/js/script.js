@@ -155,6 +155,7 @@ forms.forEach(form => {
         e.preventDefault();
         const searchInputElem = form.querySelector("#search-navbar");
         const searchInput = searchInputElem.value.trim();
+        navbarSearch.classList.add("hidden")
         if (!searchInput == '') {
             getRecipes(searchInput);
             container.classList.add('hidden');
