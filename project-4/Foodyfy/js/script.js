@@ -4,12 +4,13 @@ const forms = document.querySelectorAll("#form");
 const container = document.querySelector("#container");
 const productText = document.querySelector("#product-text");
 const navbarSearch = document.querySelector("#navbar-search");
+const viewMoreBtn = document.querySelector("#view-more");
 
 const showRecipes = async () => {
     const data = await fetch(`https://www.themealdb.com/api/json/v1/1/categories.php`);
     const res = await data.json();
     console.log(res);
-    res.categories.forEach(category => {
+    res.categories.slice(0, 6).forEach(category => {
         const categoryStr = `
         <div class="max-w-[485px] rounded-2xl shadow-2xl pb-8">
         <img class="rounded-t-2xl w-full" src="${category.strCategoryThumb ? category.strCategoryThumb : "https://i.ibb.co.com/KG5kHnx/image-not-found-scaled.png"}"
@@ -38,9 +39,48 @@ const showRecipes = async () => {
         `;
         cardContainer.insertAdjacentHTML('afterbegin', categoryStr);
     })
-}
+};
 
-showRecipes()
+let isView = false;
+viewMoreBtn.addEventListener("click", async () => {
+    isView = !isView;
+
+    if (isView) {
+        viewMoreBtn.textContent = "Show Less";
+        cardContainer.innerHTML = '';
+
+        const data = await fetch(`https://www.themealdb.com/api/json/v1/1/categories.php`);
+        const res = await data.json();
+
+        res.categories.forEach(category => {
+            const categoryStr = `
+            <div class="max-w-[485px] rounded-2xl shadow-2xl pb-8">
+                <img class="rounded-t-2xl w-full" src="${category.strCategoryThumb ? category.strCategoryThumb : "https://i.ibb.co.com/KG5kHnx/image-not-found-scaled.png"}" alt="">
+                <div class="flex items-center justify-between mt-4 px-6">
+                    <div>
+                        <h2 class="text-xl md:text-3xl font-bold">${category.strCategory}</h2>
+                        <button class="bg-[#F48E28] font-semibold px-5 md:px-7 py-2 rounded-full text-white mt-4">See More</button>
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-2">
+                            <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 1L8.854 4.6204L13 5.20452L10 8.02103L10.708 12L7 10.1204L3.292 12L4 8.02103L1 5.20452L5.146 4.6204L7 1Z" fill="#F48E28" stroke="#F48E28" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <span>4.9</span>
+                        </div>
+                    </div>
+                </div>
+            </div>`;
+            cardContainer.insertAdjacentHTML('beforeend', categoryStr);
+        });
+    } else {
+        viewMoreBtn.textContent = "View More";
+        cardContainer.innerHTML = '';
+        showRecipes();
+    }
+});
+
+showRecipes();
 
 const getRecipes = async (query) => {
     const data = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`);
@@ -53,7 +93,7 @@ const getRecipes = async (query) => {
             <h2 class="text-2xl mt-3">Nothing Found</h2>
         </div>
         `;
-        notFound.insertAdjacentHTML('afterbegin', htmlStr);
+        notFound.insertAdjacentHTML('beforeend', htmlStr);
     }
     else {
         res.meals.forEach(meal => {
