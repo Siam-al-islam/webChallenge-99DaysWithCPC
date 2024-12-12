@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background: rgba(0, 0, 0, 0.251)
+    }
+
+    .wrapper {
+        display: flex;
+        margin: 100px auto;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .wrapper div {
+        border: 2px solid red;
+        height: 200px;
+        width: 200px;
+        cursor: pointer;
+        border-radius: 30px;
+        transition: .3s ease-in-out;
+    }
+
+    .wrapper:hover> :not(:hover) {
+        filter: blur(5px);
+        opacity: 0.5;
+        transform: scale(.9);
+    }
+
+    .wrapper div:hover {
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.35);
+        transform: scale(1.1);
+    }
+</style>
+
+<body>
+    <div class="wrapper">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+
+</html>
