@@ -8,7 +8,7 @@
             "currency": "USD",
             "description": "A classic luxury dive watch with a robust design and automatic movement.",
             "category": "Luxury",
-            "imageUrl": "https://example.com/images/rolex-submariner.jpg",
+            "imageUrl": "https://i.ibb.co.com/QcsMkjx/m126610lv-0002-drp-upright-bba-with-shadow.webp",
             "features": {
                 "caseMaterial": "Stainless Steel",
                 "caseSize": "40mm",
@@ -27,7 +27,7 @@
             "currency": "USD",
             "description": "The iconic 'Moonwatch' with precision chronograph movement.",
             "category": "Luxury",
-            "imageUrl": "https://example.com/images/omega-speedmaster.jpg",
+            "imageUrl": "https://i.ibb.co.com/b2W9YcP/OMEGA-Speedmaster-Moonwatch-Professional-310-30-42-50-04-001-Cortina-Watch.png",
             "features": {
                 "caseMaterial": "Stainless Steel",
                 "caseSize": "42mm",
@@ -46,7 +46,7 @@
             "currency": "USD",
             "description": "A durable and shock-resistant watch for active lifestyles.",
             "category": "Sports",
-            "imageUrl": "https://example.com/images/casio-gshock.jpg",
+            "imageUrl": "https://i.ibb.co.com/c1GJgRy/image.jpg",
             "features": {
                 "caseMaterial": "Resin",
                 "caseSize": "45mm",
@@ -65,7 +65,7 @@
             "currency": "USD",
             "description": "An affordable automatic watch with style and durability.",
             "category": "Casual",
-            "imageUrl": "https://example.com/images/seiko-5.jpg",
+            "imageUrl": "https://i.ibb.co.com/VHMM7jv/SRPJ85-K1-1-45086.webp",
             "features": {
                 "caseMaterial": "Stainless Steel",
                 "caseSize": "42.5mm",
@@ -84,7 +84,7 @@
             "currency": "USD",
             "description": "A minimalist, everyday watch with a versatile design.",
             "category": "Casual",
-            "imageUrl": "https://example.com/images/timex-weekender.jpg",
+            "imageUrl": "https://i.ibb.co.com/t4bh61n/TW2-W85600.webp",
             "features": {
                 "caseMaterial": "Brass",
                 "caseSize": "38mm",
@@ -103,7 +103,7 @@
             "currency": "USD",
             "description": "A stylish Swiss-made automatic dress watch.",
             "category": "Luxury",
-            "imageUrl": "https://example.com/images/tissot-lelocle.jpg",
+            "imageUrl": "https://i.ibb.co.com/LzQYt1Z/tissot-watches-tissot-le-locle-powermatic-80-leather-band-swiss-made-watch-34647299686598.webp",
             "features": {
                 "caseMaterial": "Stainless Steel",
                 "caseSize": "39.3mm",
@@ -122,7 +122,7 @@
             "currency": "USD",
             "description": "A premium GPS sports watch for athletes and fitness enthusiasts.",
             "category": "Sports",
-            "imageUrl": "https://example.com/images/garmin-forerunner.jpg",
+            "imageUrl": "https://i.ibb.co.com/Gvxw1Cs/WRIST-BASED-HEART-RATE-R-Forerunner945-OF-1001-513b4c97-739d-4412-9b75-57876e64c9a1.webp",
             "features": {
                 "caseMaterial": "Fiber-Reinforced Polymer",
                 "caseSize": "47mm",
@@ -141,7 +141,7 @@
             "currency": "USD",
             "description": "A cutting-edge smartwatch with fitness, health, and connectivity features.",
             "category": "Smartwatch",
-            "imageUrl": "https://example.com/images/apple-watch.jpg",
+            "imageUrl": "https://i.ibb.co.com/yWS1924/407606-smartwatches-apple-watch-series-8-gps-45mm-10032324.png",
             "features": {
                 "caseMaterial": "Aluminum",
                 "caseSize": "45mm",
@@ -160,7 +160,7 @@
             "currency": "USD",
             "description": "A precision chronograph with iconic racing design.",
             "category": "Luxury",
-            "imageUrl": "https://example.com/images/tag-carrera.jpg",
+            "imageUrl": "https://i.ibb.co.com/6FLdvgw/CBS2212-FC6535-Tag-heuer-carrera-chronograph-blue-39mm-removebg-preview.png",
             "features": {
                 "caseMaterial": "Stainless Steel",
                 "caseSize": "44mm",
@@ -179,7 +179,7 @@
             "currency": "USD",
             "description": "A hybrid smartwatch combining analog design with smart features.",
             "category": "Smartwatch",
-            "imageUrl": "https://example.com/images/fossil-hybrid.jpg",
+            "imageUrl": "https://i.ibb.co.com/jhT23Fn/Fossil-Collider-Hybrid-Smartwatch-FTW7008-1-1-removebg-preview.png",
             "features": {
                 "caseMaterial": "Stainless Steel",
                 "caseSize": "42mm",
