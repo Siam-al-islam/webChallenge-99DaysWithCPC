@@ -7,7 +7,7 @@ const getWatches = async () => {
 
     res.watches.forEach(watch => {
         const cardStr = `
-        <div class="flex flex-col items-center border border-gray-200 rounded-lg shadow md:flex-row md:max-w-2xl">
+        <div class="flex flex-col items-center border bg-[#d6d7d256] border-gray-200 rounded-lg shadow md:flex-row md:max-w-2xl">
             <img class="object-cover rounded-t-lg h-72 md:h-auto md:w-60 md:rounded-none md:rounded-s-lg"
             src="${watch.imageUrl}"
             alt="">
@@ -36,4 +36,16 @@ const getWatches = async () => {
     });
 }
 
-getWatches()
+getWatches();
+
+const cartTab = document.querySelector("#cartTab");
+const cartIcon = document.querySelector("#cartIcon");
+const closeBtn = document.querySelector("#close");
+
+cartIcon.addEventListener('click', () => {
+    cartTab.classList.toggle("hidden");
+})
+
+closeBtn.addEventListener('click', () => {
+    cartTab.classList.add("hidden");
+})

@@ -16,7 +16,8 @@
 </head>
 
 <body>
-    <nav class="bg-[#080607]">
+    <!-- navbar  -->
+    <nav class="bg-[#080607] sticky top-0">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <a href="" class="flex items-center space-x-3 rtl:space-x-reverse">
                 <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">WristVault</span>
@@ -32,18 +33,33 @@
                     </svg>
                     <span class="sr-only">Search</span>
                 </button>
-                <div class="relative hidden md:block">
-                    <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-                        <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
-                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                <div class="flex gap-2">
+                    <!-- badge  -->
+                    <button id="cartIcon" type="button"
+                        class="relative inline-flex items-center p-2 text-sm font-medium text-center text-white bg-[#AE946A] rounded-lg">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M5.00014 14H18.1359C19.1487 14 19.6551 14 20.0582 13.8112C20.4134 13.6448 20.7118 13.3777 20.9163 13.0432C21.1485 12.6633 21.2044 12.16 21.3163 11.1534L21.9013 5.88835C21.9355 5.58088 21.9525 5.42715 21.9031 5.30816C21.8597 5.20366 21.7821 5.11697 21.683 5.06228C21.5702 5 21.4155 5 21.1062 5H4.50014M2 2H3.24844C3.51306 2 3.64537 2 3.74889 2.05032C3.84002 2.09463 3.91554 2.16557 3.96544 2.25376C4.02212 2.35394 4.03037 2.48599 4.04688 2.7501L4.95312 17.2499C4.96963 17.514 4.97788 17.6461 5.03456 17.7462C5.08446 17.8344 5.15998 17.9054 5.25111 17.9497C5.35463 18 5.48694 18 5.75156 18H19M7.5 21.5H7.51M16.5 21.5H16.51M8 21.5C8 21.7761 7.77614 22 7.5 22C7.22386 22 7 21.7761 7 21.5C7 21.2239 7.22386 21 7.5 21C7.77614 21 8 21.2239 8 21.5ZM17 21.5C17 21.7761 16.7761 22 16.5 22C16.2239 22 16 21.7761 16 21.5C16 21.2239 16.2239 21 16.5 21C16.7761 21 17 21.2239 17 21.5Z"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
-                        <span class="sr-only">Search icon</span>
+                        <span class="sr-only">Notifications</span>
+                        <div id="cart-text"
+                            class="absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-red-500 border-2 border-white rounded-full -top-2 -end-2 dark:border-gray-900">
+                            0</div>
+                    </button>
+                    <div class="relative hidden md:block">
+                        <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                            <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                            </svg>
+                            <span class="sr-only">Search icon</span>
+                        </div>
+                        <input type="text" id="search-navbar"
+                            class="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            placeholder="Search...">
                     </div>
-                    <input type="text" id="search-navbar"
-                        class="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                        placeholder="Search...">
                 </div>
                 <button data-collapse-toggle="navbar-search" type="button"
                     class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
@@ -90,7 +106,7 @@
     <section
         class="bg-[url('https://i.ibb.co.com/5YzjB8y/9053935816d47ab0c50b2e497453af49-1.png')] bg-no-repeat bg-cover bg-right">
         <div class="max-w-screen-xl mx-auto">
-            <div class="md:w-[400px] pt-9 pb-20 md:pt-[200px] md:pb-[250px] px-3 backdrop-blur-sm">
+            <div class="md:w-[400px] pt-9 pb-20 md:pt-[200px] md:pb-[250px] px-3">
                 <h1 class="text-white font-bold text-4xl md:text-6xl">WristVault</h1>
                 <h3 class="uppercase text-2xl text-[#AE946A] tracking-widest mt-7">Time is a luxury</h3>
                 <p class="text-[#e5e5e57c] text-xl font-thin mt-5">A Classic Collection of <br> Luxurious Watches for
@@ -115,7 +131,30 @@
 
         </div>
     </section>
-
+    <!-- cart tab  -->
+    <div id="cartTab" class="fixed md:w-[300px] bg-gray-300 p-4 bottom-0 top-0 right-0 hidden">
+        <h1 class="text-2xl font-bold">Cart</h1>
+        <!-- item added  -->
+        <div class="overflow-auto">
+            <div class="flex items-center gap-3 mt-8">
+                <img class="w-11 object-cover"
+                    src="https://i.ibb.co.com/yWS1924/407606-smartwatches-apple-watch-series-8-gps-45mm-10032324.png"
+                    alt="">
+                <h2>Apple Watch Series 8</h2>
+                <span>$322</span>
+                <div class="flex items-center text-center">
+                    <span class="w-7 h-7 bg-gray-400 cursor-pointer">-</span>
+                    <span class="w-7 h-7">1</span>
+                    <span class="w-7 h-7 bg-gray-400 cursor-pointer">+</span>
+                </div>
+            </div>
+        </div>
+        <!-- check out btn  -->
+        <div class="flex gap-3 fixed w-[270px] bottom-5">
+            <button id="close" class="bg-gray-400 flex-1 py-3 text-white font-semibold">Close</button>
+            <button class="bg-green-600 flex-1 py-3 text-white font-semibold">Check Out</button>
+        </div>
+    </div>
     <script src="js/script.js"></script>
     <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
     <script src="https://kit.fontawesome.com/dacd871fc2.js" crossorigin="anonymous"></script>
