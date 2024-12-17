@@ -1,0 +1,194 @@
+{
+    "watches": [
+        {
+            "id": 1,
+            "name": "Rolex Submariner",
+            "brand": "Rolex",
+            "price": 8500,
+            "currency": "USD",
+            "description": "A classic luxury dive watch with a robust design and automatic movement.",
+            "category": "Luxury",
+            "imageUrl": "https://example.com/images/rolex-submariner.jpg",
+            "features": {
+                "caseMaterial": "Stainless Steel",
+                "caseSize": "40mm",
+                "waterResistance": "300m",
+                "movement": "Automatic",
+                "powerReserve": "48 hours"
+            },
+            "availability": true,
+            "rating": 4.9
+        },
+        {
+            "id": 2,
+            "name": "Omega Speedmaster",
+            "brand": "Omega",
+            "price": 6200,
+            "currency": "USD",
+            "description": "The iconic 'Moonwatch' with precision chronograph movement.",
+            "category": "Luxury",
+            "imageUrl": "https://example.com/images/omega-speedmaster.jpg",
+            "features": {
+                "caseMaterial": "Stainless Steel",
+                "caseSize": "42mm",
+                "waterResistance": "50m",
+                "movement": "Manual Wind",
+                "powerReserve": "48 hours"
+            },
+            "availability": true,
+            "rating": 4.8
+        },
+        {
+            "id": 3,
+            "name": "Casio G-Shock GA-2100",
+            "brand": "Casio",
+            "price": 120,
+            "currency": "USD",
+            "description": "A durable and shock-resistant watch for active lifestyles.",
+            "category": "Sports",
+            "imageUrl": "https://example.com/images/casio-gshock.jpg",
+            "features": {
+                "caseMaterial": "Resin",
+                "caseSize": "45mm",
+                "waterResistance": "200m",
+                "movement": "Quartz",
+                "batteryLife": "5 years"
+            },
+            "availability": true,
+            "rating": 4.5
+        },
+        {
+            "id": 4,
+            "name": "Seiko 5 Sports",
+            "brand": "Seiko",
+            "price": 300,
+            "currency": "USD",
+            "description": "An affordable automatic watch with style and durability.",
+            "category": "Casual",
+            "imageUrl": "https://example.com/images/seiko-5.jpg",
+            "features": {
+                "caseMaterial": "Stainless Steel",
+                "caseSize": "42.5mm",
+                "waterResistance": "100m",
+                "movement": "Automatic",
+                "powerReserve": "41 hours"
+            },
+            "availability": true,
+            "rating": 4.7
+        },
+        {
+            "id": 5,
+            "name": "Timex Weekender",
+            "brand": "Timex",
+            "price": 50,
+            "currency": "USD",
+            "description": "A minimalist, everyday watch with a versatile design.",
+            "category": "Casual",
+            "imageUrl": "https://example.com/images/timex-weekender.jpg",
+            "features": {
+                "caseMaterial": "Brass",
+                "caseSize": "38mm",
+                "waterResistance": "30m",
+                "movement": "Quartz",
+                "batteryLife": "10 years"
+            },
+            "availability": true,
+            "rating": 4.2
+        },
+        {
+            "id": 6,
+            "name": "Tissot Le Locle Powermatic",
+            "brand": "Tissot",
+            "price": 550,
+            "currency": "USD",
+            "description": "A stylish Swiss-made automatic dress watch.",
+            "category": "Luxury",
+            "imageUrl": "https://example.com/images/tissot-lelocle.jpg",
+            "features": {
+                "caseMaterial": "Stainless Steel",
+                "caseSize": "39.3mm",
+                "waterResistance": "30m",
+                "movement": "Automatic",
+                "powerReserve": "80 hours"
+            },
+            "availability": false,
+            "rating": 4.6
+        },
+        {
+            "id": 7,
+            "name": "Garmin Forerunner 945",
+            "brand": "Garmin",
+            "price": 600,
+            "currency": "USD",
+            "description": "A premium GPS sports watch for athletes and fitness enthusiasts.",
+            "category": "Sports",
+            "imageUrl": "https://example.com/images/garmin-forerunner.jpg",
+            "features": {
+                "caseMaterial": "Fiber-Reinforced Polymer",
+                "caseSize": "47mm",
+                "waterResistance": "50m",
+                "movement": "Smartwatch",
+                "batteryLife": "2 weeks (smartwatch mode)"
+            },
+            "availability": true,
+            "rating": 4.8
+        },
+        {
+            "id": 8,
+            "name": "Apple Watch Series 8",
+            "brand": "Apple",
+            "price": 399,
+            "currency": "USD",
+            "description": "A cutting-edge smartwatch with fitness, health, and connectivity features.",
+            "category": "Smartwatch",
+            "imageUrl": "https://example.com/images/apple-watch.jpg",
+            "features": {
+                "caseMaterial": "Aluminum",
+                "caseSize": "45mm",
+                "waterResistance": "50m",
+                "movement": "Digital",
+                "batteryLife": "18 hours"
+            },
+            "availability": true,
+            "rating": 4.7
+        },
+        {
+            "id": 9,
+            "name": "Tag Heuer Carrera Chronograph",
+            "brand": "Tag Heuer",
+            "price": 4500,
+            "currency": "USD",
+            "description": "A precision chronograph with iconic racing design.",
+            "category": "Luxury",
+            "imageUrl": "https://example.com/images/tag-carrera.jpg",
+            "features": {
+                "caseMaterial": "Stainless Steel",
+                "caseSize": "44mm",
+                "waterResistance": "100m",
+                "movement": "Automatic",
+                "powerReserve": "80 hours"
+            },
+            "availability": true,
+            "rating": 4.9
+        },
+        {
+            "id": 10,
+            "name": "Fossil Hybrid HR",
+            "brand": "Fossil",
+            "price": 195,
+            "currency": "USD",
+            "description": "A hybrid smartwatch combining analog design with smart features.",
+            "category": "Smartwatch",
+            "imageUrl": "https://example.com/images/fossil-hybrid.jpg",
+            "features": {
+                "caseMaterial": "Stainless Steel",
+                "caseSize": "42mm",
+                "waterResistance": "30m",
+                "movement": "Hybrid Smartwatch",
+                "batteryLife": "2 weeks"
+            },
+            "availability": true,
+            "rating": 4.4
+        }
+    ]
+}
