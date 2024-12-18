@@ -1,4 +1,8 @@
 const cardWrapper = document.querySelector('#card-wrapper');
+const cartTab = document.querySelector("#cartTab");
+const cartContent = document.querySelector("#cartContent");
+const cartIcon = document.querySelector("#cartIcon");
+const closeBtn = document.querySelector("#close");
 let cartList = [];
 
 const getWatches = async () => {
@@ -40,18 +44,28 @@ const getWatches = async () => {
         button.addEventListener('click', (e) => {
             const index = e.currentTarget.dataset.index;
             const selectedWatch = res.watches[index];
-            console.log(selectedWatch);
+            addToCart(selectedWatch);
         });
     });
 };
 
 getWatches();
 
-const addToC
+const addToCart = (item) => {
+    cartList.push(item);
 
-const cartTab = document.querySelector("#cartTab");
-const cartIcon = document.querySelector("#cartIcon");
-const closeBtn = document.querySelector("#close");
+    const cartItemStr = `
+        <div class="flex items-center justify-between gap-3 mt-8">
+            <img class="w-11 object-cover"
+            src="${item.imageUrl}"
+            alt="">
+            <h2>${item.name.slice(0, 10) + "..."}</h2>
+            <span>$ <span>${item.price}</span></span>
+        </div>
+    `;
+
+    cartContent.insertAdjacentHTML('beforeend', cartItemStr);
+}
 
 cartIcon.addEventListener('click', () => {
     cartTab.classList.toggle("hidden");
