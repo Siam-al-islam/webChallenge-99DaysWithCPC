@@ -1,11 +1,12 @@
 const cardWrapper = document.querySelector('#card-wrapper');
+let cartList = [];
 
 const getWatches = async () => {
     const data = await fetch("watches.json");
     const res = await data.json();
     console.log(res);
 
-    res.watches.forEach(watch => {
+    res.watches.forEach((watch, index) => {
         const cardStr = `
         <div class="flex flex-col items-center border bg-[#d6d7d256] border-gray-200 rounded-lg shadow md:flex-row md:max-w-2xl">
             <img class="object-cover rounded-t-lg h-72 md:h-auto md:w-60 md:rounded-none md:rounded-s-lg"
@@ -25,7 +26,7 @@ const getWatches = async () => {
                 </div>
                 <h3 class="font-semibold mt-3">Brand: <span class="text-[#AE946A]">${watch.brand}</span></h3>
                 <div class="flex gap-2">
-                    <button class="mt-4 w-2/4 bg-[#AE946A] text-white py-2 rounded-md">Add To Cart</button>
+                    <button class="mt-4 w-2/4 bg-[#AE946A] text-white py-2 rounded-md add-to-cart-btn" data-index="${index}">Add To Cart</button>
                     <button class="mt-4 w-2/4 bg-[#AE946A] text-white py-2 rounded-md">View Details</button>
                 </div>
             </div>
@@ -34,9 +35,19 @@ const getWatches = async () => {
 
         cardWrapper.insertAdjacentHTML('beforeend', cardStr);
     });
-}
+
+    document.querySelectorAll(".add-to-cart-btn").forEach(button => {
+        button.addEventListener('click', (e) => {
+            const index = e.currentTarget.dataset.index;
+            const selectedWatch = res.watches[index];
+            console.log(selectedWatch);
+        });
+    });
+};
 
 getWatches();
+
+const addToC
 
 const cartTab = document.querySelector("#cartTab");
 const cartIcon = document.querySelector("#cartIcon");
