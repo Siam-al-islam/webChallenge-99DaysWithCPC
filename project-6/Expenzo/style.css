@@ -1,3 +1,14 @@
 body{
     font-family: "Poppins", serif;
 }
+
+th{
+    border: 1px solid #ffffff;
+    padding: 8px;
+    text-align: center;
+    background-color: #22C55E;
+}
+
+tfoot, td{
+    font-weight: bold;
+}
