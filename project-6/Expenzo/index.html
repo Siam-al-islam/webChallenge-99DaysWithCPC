@@ -46,12 +46,30 @@
     </section>
 
     <!-- Expense view  -->
-    <section id="expense-details" class="max-w-screen-xl mx-auto p-3">
+    <section id="expense-details" class="hidden max-w-screen-xl mx-auto p-3">
         <button onclick="handleBackBtn()" id="back-btn" type="button"
-            class="hidden mt-4 text-white bg-[#33a0ff9c] backdrop-blur-sm font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-blue-600">Go Back
+            class="mt-4 text-white bg-[#33a0ff9c] backdrop-blur-sm font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-blue-600">Go
+            Back
         </button>
-        <div>
-            <label for="category-select"></label>
+        <div class="bg-[#33a0ff9c] backdrop-blur-sm mt-6 px-6 py-6 rounded-2xl flex justify-between space-y-3 items-center flex-wrap">
+            <div>
+                <label class="text-white font-medium" for="category-select">Category: </label>
+                <select class="rounded-xl px-4 py-1 ml-1" name="" id="category-select">
+                    <option value="Food & Beverage">Food & Beverage</option>
+                    <option value="Rent">Rent</option>
+                    <option value="Transport">Transport</option>
+                    <option value="Relaxing">Relaxing</option>
+                </select>
+            </div>
+            <div>
+                <label class="text-white font-medium" for="amount-input">Amount: </label>
+                <input type="number" class="rounded-xl text-center py-1 ml-1" name="" id="amount-input">
+            </div>
+            <div>
+                <label class="text-white font-medium" for="date-input">Date: </label>
+                <input class="rounded-xl px-4 py-1 ml-1" type="date" name="" id="date-input">
+            </div>
+            <button class="text-white bg-green-500 px-8 py-2 rounded-full font-medium" id="add-btn">Add</button>
         </div>
     </section>
 
