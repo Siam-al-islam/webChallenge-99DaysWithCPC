@@ -9,6 +9,18 @@ th{
     background-color: #22C55E;
 }
 
+td{
+    padding: 8px;
+}
+
 tfoot, td{
-    font-weight: bold;
+    font-weight: 400;
+}
+
+.remove-icon{
+    color: red;
+    background-color: rgba(255, 255, 255, 0.64);
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
 }
