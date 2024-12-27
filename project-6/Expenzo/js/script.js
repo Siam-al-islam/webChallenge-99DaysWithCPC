@@ -2,12 +2,29 @@ const recordBtn = document.querySelector("#record-btn");
 const backBtn = document.querySelector("#back-btn");
 const welcomeSection = document.querySelector("#welcome-sec");
 const expenseDetails = document.querySelector("#expense-details");
+let recordInput = document.querySelector("#record-input");
+let balance = document.querySelector("#balance");
 
 const handleRecordBtn = () => {
+    if (recordInput.value) {
+        showElement(backBtn, "hidden");
+        hideElement(welcomeSection, "hidden");
+        showElement(expenseDetails, "hidden");
+        let recordInputBalance = parseInt(recordInput.value);
+        balance.textContent = recordInputBalance;
+        saveBalance();
+    }
+    else {
+
+        return;
+    }
+};
+
+const handlePastExpense = () => {
     showElement(backBtn, "hidden");
     hideElement(welcomeSection, "hidden");
     showElement(expenseDetails, "hidden");
-};
+}
 
 const handleBackBtn = () => {
     hideElement(expenseDetails, "hidden");
@@ -33,7 +50,7 @@ addBtn.addEventListener("click", () => {
     let category = categorySelect.value;
     let amount = parseInt(amountInput.value);
     let date = dateInput.value;
-    
+
     hideElement(fieldError, "hidden")
     hideElement(numberError, "hidden")
 
@@ -41,7 +58,7 @@ addBtn.addEventListener("click", () => {
         showElement(fieldError, "hidden")
         return;
     }
-    if(isNaN(amount)){
+    if (isNaN(amount)) {
         showElement(numberError, "hidden")
         return;
     }
@@ -66,7 +83,7 @@ addBtn.addEventListener("click", () => {
 });
 
 expencesBody.addEventListener('click', (e) => {
-    if(e.target.classList.contains("remove-icon")){
+    if (e.target.classList.contains("remove-icon")) {
         const expenseRow = e.target.closest("tr");
 
         const category = expenseRow.querySelector("td:nth-child(1)").textContent;
@@ -92,6 +109,15 @@ expencesBody.addEventListener('click', (e) => {
 const saveData = () => {
     localStorage.setItem("data", JSON.stringify(expences));
 }
+
+const saveBalance = () => {
+    localStorage.setItem("balance", parseInt(balance.textContent));
+}
+
+const showBalance = () => {
+    balance.textContent = localStorage.getItem("balance");
+}
+
 const showData = () => {
     const storedData = localStorage.getItem("data");
     if (storedData) {
@@ -117,3 +143,4 @@ const showData = () => {
 }
 
 showData();
+showBalance()
