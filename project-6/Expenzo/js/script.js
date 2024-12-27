@@ -66,6 +66,10 @@ addBtn.addEventListener("click", () => {
     expences.push({ category, amount, date });
     totalAmount += amount;
     totalAmountCell.textContent = "Total: " + totalAmount;
+
+    balance.textContent = parseInt(balance.textContent) - parseInt(totalAmount);
+    saveBalance();
+    
     totalAmountCell.classList.add('totalBg');
 
     const htmlStr = `
@@ -78,7 +82,7 @@ addBtn.addEventListener("click", () => {
     `;
 
     expencesBody.insertAdjacentHTML('beforeend', htmlStr);
-
+    
     saveData();
 });
 
@@ -96,6 +100,9 @@ expencesBody.addEventListener('click', (e) => {
         totalAmount -= amount;
 
         totalAmountCell.textContent = "Total: " + totalAmount;
+
+        balance.textContent = parseInt(balance.textContent) + parseInt(amount);
+        saveBalance();
 
         if (totalAmount === 0) {
             totalAmountCell.classList.remove('totalBg');
