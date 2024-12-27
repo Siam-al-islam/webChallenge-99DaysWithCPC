@@ -10,6 +10,7 @@ th{
 }
 
 td{
+    border: 1px solid rgb(255, 255, 255);
     padding: 8px;
 }
 
@@ -23,4 +24,8 @@ tfoot, td{
     padding: 8px;
     border-radius: 50%;
     cursor: pointer;
+}
+
+.totalBg{
+    background-color: #22C55E;
 }

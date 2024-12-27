@@ -26,24 +26,33 @@ const addBtn = document.querySelector("#add-btn");
 const expencesBody = document.querySelector("#expense-table-body");
 const totalAmountCell = document.querySelector("#total-amount");
 
-addBtn.addEventListener("click", (e) => {
+const fieldError = document.querySelector("#fields-error");
+const numberError = document.querySelector("#number-error");
+
+addBtn.addEventListener("click", () => {
     let category = categorySelect.value;
     let amount = parseInt(amountInput.value);
     let date = dateInput.value;
+    
+    hideElement(fieldError, "hidden")
+    hideElement(numberError, "hidden")
 
-    if(category, amount, date === ""){
-        console.log("please fill all of this field");
+    if (category, amount, date === "") {
+        showElement(fieldError, "hidden")
+        return;
+    }
+    if(isNaN(amount)){
+        showElement(numberError, "hidden")
         return;
     }
 
-    expences.push({category, amount, date});
+    expences.push({ category, amount, date });
     totalAmount += amount;
-    totalAmountCell.textContent = totalAmount;
+    totalAmountCell.textContent = "Total: " + totalAmount;
+    totalAmountCell.classList.add('totalBg');
 
-    console.log(expences);
-    
     const htmlStr = `
-        <tr class="text-center">
+        <tr id="expense-item" class="text-center">
             <td>${category}</td>
             <td>${amount}</td>
             <td>${date}</td>
@@ -52,4 +61,25 @@ addBtn.addEventListener("click", (e) => {
     `;
 
     expencesBody.insertAdjacentHTML('beforeend', htmlStr);
+});
+
+expencesBody.addEventListener('click', (e) => {
+    if(e.target.classList.contains("remove-icon")){
+        const expenseRow = e.target.closest("tr");
+
+        const category = expenseRow.querySelector("td:nth-child(1)").textContent;
+        const amount = parseInt(expenseRow.querySelector("td:nth-child(2)").textContent);
+
+        expenseRow.remove();
+
+        expences = expences.filter(exp => exp.category !== category || exp.amount !== amount);
+
+        totalAmount -= amount;
+
+        totalAmountCell.textContent = "Total: " + totalAmount;
+
+        if (totalAmount === 0) {
+            totalAmountCell.classList.remove('totalBg');
+        }
+    }
 })
