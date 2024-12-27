@@ -61,6 +61,8 @@ addBtn.addEventListener("click", () => {
     `;
 
     expencesBody.insertAdjacentHTML('beforeend', htmlStr);
+
+    saveData();
 });
 
 expencesBody.addEventListener('click', (e) => {
@@ -82,4 +84,36 @@ expencesBody.addEventListener('click', (e) => {
             totalAmountCell.classList.remove('totalBg');
         }
     }
-})
+
+    saveData();
+});
+
+// localStorage 
+const saveData = () => {
+    localStorage.setItem("data", JSON.stringify(expences));
+}
+const showData = () => {
+    const storedData = localStorage.getItem("data");
+    if (storedData) {
+        expences = JSON.parse(storedData);
+        expences.forEach(exp => {
+            const htmlStr = `
+                <tr id="expense-item" class="text-center">
+                    <td>${exp.category}</td>
+                    <td>${exp.amount}</td>
+                    <td>${exp.date}</td>
+                    <td><i class="fa fa-trash remove-icon" aria-hidden="true"></i></td>
+                </tr>
+            `;
+            expencesBody.insertAdjacentHTML('beforeend', htmlStr);
+        });
+
+        totalAmount = expences.reduce((acc, exp) => acc + exp.amount, 0);
+        totalAmountCell.textContent = "Total: " + totalAmount;
+        if (totalAmount > 0) {
+            totalAmountCell.classList.add('totalBg');
+        }
+    }
+}
+
+showData();
