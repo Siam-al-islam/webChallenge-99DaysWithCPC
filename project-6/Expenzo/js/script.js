@@ -15,7 +15,6 @@ const handleRecordBtn = () => {
         saveBalance();
     }
     else {
-
         return;
     }
 };
@@ -67,7 +66,7 @@ addBtn.addEventListener("click", () => {
     totalAmount += amount;
     totalAmountCell.textContent = "Total: " + totalAmount;
 
-    balance.textContent = parseInt(balance.textContent) - parseInt(totalAmount);
+    balance.textContent = parseInt(balance.textContent) - amount;
     saveBalance();
     
     totalAmountCell.classList.add('totalBg');
@@ -101,7 +100,7 @@ expencesBody.addEventListener('click', (e) => {
 
         totalAmountCell.textContent = "Total: " + totalAmount;
 
-        balance.textContent = parseInt(balance.textContent) + parseInt(amount);
+        balance.textContent = parseInt(balance.textContent) + amount;
         saveBalance();
 
         if (totalAmount === 0) {
@@ -113,16 +112,15 @@ expencesBody.addEventListener('click', (e) => {
 });
 
 // localStorage 
-const saveData = () => {
-    localStorage.setItem("data", JSON.stringify(expences));
-}
-
 const saveBalance = () => {
     localStorage.setItem("balance", parseInt(balance.textContent));
 }
 
 const showBalance = () => {
     balance.textContent = localStorage.getItem("balance");
+}
+const saveData = () => {
+    localStorage.setItem("data", JSON.stringify(expences));
 }
 
 const showData = () => {
