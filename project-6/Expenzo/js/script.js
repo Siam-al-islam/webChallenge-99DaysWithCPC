@@ -61,6 +61,10 @@ addBtn.addEventListener("click", () => {
         showElement(numberError, "hidden")
         return;
     }
+    if(amount < 1){
+        showElement(numberError, "hidden");
+        return;
+    }
 
     expences.push({ category, amount, date });
     totalAmount += amount;
