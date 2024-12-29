@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Welcome to Expenzo</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,7 +39,7 @@
                 <input class="mt-5 rounded-xl px-3 py-1 text-center" type="text" placeholder="Enter your Earning"
                     name="" id="record-input">
                 <button onclick="handleRecordBtn()" id="record-btn"
-                    class="flex items-center mx-auto bg-[#E1FFBB] px-10 py-2 font-bold rounded-full mt-3">Record Expense
+                    class="flex items-center mx-auto bg-[#E1FFBB] px-8 md:px-10 py-2 font-semibold md:font-bold rounded-full mt-3">Record Expense
                     <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                         fill="none" viewBox="0 0 14 10">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -47,7 +47,7 @@
                     </svg>
                 </button>
                 <button onclick="handlePastExpense()" id="past-recordBtn"
-                    class="flex items-center mx-auto bg-[#E1FFBB] px-10 py-2 font-bold rounded-full mt-3">Already have
+                    class="flex items-center mx-auto bg-[#E1FFBB] px-8 md:px-10 py-2 font-semibold md:font-bold rounded-full mt-3">Already have
                     an expense?
                     <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                         fill="none" viewBox="0 0 14 10">
@@ -106,14 +106,14 @@
                 <div class="max-h-80 overflow-y-auto mt-4">
                     <table class="w-full border-collapse overflow-auto overflow-y-hidden table-fixed relative">
                         <thead class="sticky top-0">
-                            <tr>
+                            <tr class="text-base">
                                 <th>Category</th>
                                 <th>Amount</th>
                                 <th>Date</th>
                                 <th>Delete</th>
                             </tr>
                         </thead>
-                        <tbody id="expense-table-body" class="">
+                        <tbody id="expense-table-body" class="text-[14px]">
     
                         </tbody>
                         <tfoot>
