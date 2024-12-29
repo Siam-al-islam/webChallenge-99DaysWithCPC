@@ -100,30 +100,32 @@
             </div>
         </div>
         <!-- Expense List -->
-        <div class="text-white mt-6 flex flex-wrap gap-4">
+        <div class="text-white mt-4 md:mt-6 flex md:flex-row flex-col-reverse gap-4">
             <div class="bg-[#33a0ff9c] backdrop-blur-sm py-4 px-3 rounded-xl table-wrapper w-full md:w-3/4">
                 <h2 class="text-xl font-medium text-center">Expense List</h2>
-                <table class="w-full border-collapse mt-4 overflow-auto overflow-y-hidden table-fixed">
-                    <thead>
-                        <tr>
-                            <th>Category</th>
-                            <th>Amount</th>
-                            <th>Date</th>
-                            <th>Delete</th>
-                        </tr>
-                    </thead>
-                    <tbody id="expense-table-body" class="">
-
-                    </tbody>
-                    <tfoot>
-                        <tr class="text-center">
-                            <td></td>
-                            <td id="total-amount"></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                    </tfoot>
-                </table>
+                <div class="max-h-80 overflow-y-auto mt-4">
+                    <table class="w-full border-collapse overflow-auto overflow-y-hidden table-fixed relative">
+                        <thead class="sticky top-0">
+                            <tr>
+                                <th>Category</th>
+                                <th>Amount</th>
+                                <th>Date</th>
+                                <th>Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody id="expense-table-body" class="">
+    
+                        </tbody>
+                        <tfoot>
+                            <tr class="text-center">
+                                <td></td>
+                                <td id="total-amount"></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
             </div>
             <div id="balance-section" class="bg-[#33a0ff9c] backdrop-blur-sm px-6 py-8 rounded-xl flex-1 h-fit text-center">
                 <h2 class="text-white text-2xl text-center">Balance: <span id="balance"></span></h2>

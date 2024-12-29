@@ -111,6 +111,10 @@ expencesBody.addEventListener('click', (e) => {
         totalAmountCell.textContent = "Total: " + totalAmount;
 
         balance.textContent = parseInt(balance.textContent) + amount;
+
+        if(parseInt(balance.textContent) > 0){
+            hideElement(lowBalance, "hidden");
+        }
         saveBalance();
 
         if (totalAmount === 0) {
