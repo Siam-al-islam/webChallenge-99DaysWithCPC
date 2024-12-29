@@ -61,14 +61,11 @@
 
     <!-- Expense view  -->
     <section id="expense-details" class="hidden max-w-screen-xl mx-auto px-2">
-        <div class="flex justify-between items-center">
+        <div>
             <button onclick="handleBackBtn()" id="back-btn" type="button"
                 class="mt-4 text-white bg-[#33a0ff9c] backdrop-blur-sm font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-blue-600">Go
                 Back
             </button>
-            <div class="bg-[#33a0ff9c] backdrop-blur-sm px-6 py-2.5 rounded-2xl">
-                <h2 class="text-white">Balance: <span id="balance"></span></h2>
-            </div>
         </div>
         <!-- fields  -->
         <div class="bg-[#33a0ff9c] backdrop-blur-sm mt-6 px-6 py-6 rounded-2xl">
@@ -103,29 +100,35 @@
             </div>
         </div>
         <!-- Expense List -->
-        <div class="text-white bg-[#33a0ff9c] backdrop-blur-sm mt-6 py-4 px-3 rounded-xl table-wrapper">
-            <h2 class="text-xl font-medium text-center">Expense List</h2>
-            <table class="w-full border-collapse mt-4 overflow-auto overflow-y-hidden table-fixed">
-                <thead>
-                    <tr>
-                        <th>Category</th>
-                        <th>Amount</th>
-                        <th>Date</th>
-                        <th>Delete</th>
-                    </tr>
-                </thead>
-                <tbody id="expense-table-body" class="">
+        <div class="text-white mt-6 flex flex-wrap gap-4">
+            <div class="bg-[#33a0ff9c] backdrop-blur-sm py-4 px-3 rounded-xl table-wrapper w-full md:w-3/4">
+                <h2 class="text-xl font-medium text-center">Expense List</h2>
+                <table class="w-full border-collapse mt-4 overflow-auto overflow-y-hidden table-fixed">
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Amount</th>
+                            <th>Date</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody id="expense-table-body" class="">
 
-                </tbody>
-                <tfoot>
-                    <tr class="text-center">
-                        <td></td>
-                        <td id="total-amount"></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                </tfoot>
-            </table>
+                    </tbody>
+                    <tfoot>
+                        <tr class="text-center">
+                            <td></td>
+                            <td id="total-amount"></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <div id="balance-section" class="bg-[#33a0ff9c] backdrop-blur-sm px-6 py-8 rounded-xl flex-1 h-fit text-center">
+                <h2 class="text-white text-2xl text-center">Balance: <span id="balance"></span></h2>
+                <p class="text-red-700 italic hidden" id="low-balance">You balance is low!</p>
+            </div>
         </div>
     </section>
 

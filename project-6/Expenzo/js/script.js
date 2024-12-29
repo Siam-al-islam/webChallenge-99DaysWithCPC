@@ -41,6 +41,8 @@ const dateInput = document.querySelector("#date-input");
 const addBtn = document.querySelector("#add-btn");
 const expencesBody = document.querySelector("#expense-table-body");
 const totalAmountCell = document.querySelector("#total-amount");
+const balanceSection = document.querySelector("#balance-section");
+const lowBalance = document.querySelector("#low-balance");
 
 const fieldError = document.querySelector("#fields-error");
 const numberError = document.querySelector("#number-error");
@@ -71,6 +73,10 @@ addBtn.addEventListener("click", () => {
     totalAmountCell.textContent = "Total: " + totalAmount;
 
     balance.textContent = parseInt(balance.textContent) - amount;
+
+    if(parseInt(balance.textContent) < 0){
+        showElement(lowBalance, "hidden");
+    }
     saveBalance();
     
     totalAmountCell.classList.add('totalBg');
