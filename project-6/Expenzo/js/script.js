@@ -76,6 +76,8 @@ addBtn.addEventListener("click", () => {
 
     if(parseInt(balance.textContent) < 0){
         showElement(lowBalance, "hidden");
+        balance.textContent = 0;
+        return;
     }
     saveBalance();
     
