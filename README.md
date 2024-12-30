@@ -9,3 +9,5 @@ Project 3: https://weather-app-by-siam.netlify.app/
 Project 4: https://foodyfy.netlify.app/
 
 Project 5: https://wristvault.netlify.app/
+
+Project 6: https://expenzo234.netlify.app/
