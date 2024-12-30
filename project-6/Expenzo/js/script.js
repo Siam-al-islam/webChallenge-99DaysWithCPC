@@ -63,8 +63,15 @@ addBtn.addEventListener("click", () => {
         showElement(numberError, "hidden")
         return;
     }
-    if(amount < 1){
+    if (amount < 1) {
         showElement(numberError, "hidden");
+        return;
+    }
+    if (amount > parseInt(balance.textContent)) {
+        return;
+    }
+    if (parseInt(balance.textContent) < 1) {
+        showElement(lowBalance, "hidden");
         return;
     }
 
@@ -73,14 +80,8 @@ addBtn.addEventListener("click", () => {
     totalAmountCell.textContent = "Total: " + totalAmount;
 
     balance.textContent = parseInt(balance.textContent) - amount;
-
-    if(parseInt(balance.textContent) < 0){
-        showElement(lowBalance, "hidden");
-        balance.textContent = 0;
-        return;
-    }
     saveBalance();
-    
+
     totalAmountCell.classList.add('totalBg');
 
     const htmlStr = `
@@ -93,7 +94,7 @@ addBtn.addEventListener("click", () => {
     `;
 
     expencesBody.insertAdjacentHTML('beforeend', htmlStr);
-    
+
     saveData();
 });
 
@@ -114,7 +115,7 @@ expencesBody.addEventListener('click', (e) => {
 
         balance.textContent = parseInt(balance.textContent) + amount;
 
-        if(parseInt(balance.textContent) > 0){
+        if (parseInt(balance.textContent) > 0) {
             hideElement(lowBalance, "hidden");
         }
         saveBalance();
