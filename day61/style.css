@@ -1,0 +1,21 @@
+.order-btn{
+    padding: 10px 60px;
+    margin: 200px;
+    font: bold;
+    font-size: 18px;
+    background-color: rgb(0, 93, 140);
+    color: white;
+    border: 0;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.order-btn:hover{
+    color: white;
+    background-color: white;
+    background-image: url("https://c4.wallpaperflare.com/wallpaper/737/699/654/abstractspanliaa-hrefgradientli-stylefloatleftspan-classbtn-link-btn-link-a-btn-xsgradient-4k-background-desktop-wallpaper-preview.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
