@@ -13,10 +13,10 @@ body{
     font-family: "Poppins", serif;
 }
 
-.profile-banner img{
+.banner img{
     filter: grayscale(100%);
     transition: .5s;
 }
-.profile-banner img:hover{
+.banner img:hover{
     filter: grayscale(0);
 }
