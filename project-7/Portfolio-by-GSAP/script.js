@@ -19,7 +19,7 @@ tl.from(".banner .text-3", {
     duration: .5
 })
 
-tl.from(".banner p", {
+tl.from(".banner .info p", {
     x:-100,
     opacity: 0,
     duration: .5
@@ -49,3 +49,4 @@ gsap.to("body", {
         end:"bottom 100%",
     }
 })
+
