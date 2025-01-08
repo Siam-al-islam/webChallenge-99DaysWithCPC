@@ -25,6 +25,12 @@ tl.from(".banner .info p", {
     duration: .5
 })
 
+tl.from(".banner .info button", {
+    y:50,
+    opacity: 0,
+    duration: .5
+})
+
 gsap.to(".banner img", {
     y: -50,
     duration: 2,
@@ -50,3 +56,12 @@ gsap.to("body", {
     }
 })
 
+gsap.from(".about-info h1", {
+    y: 50,
+    opacity: 0,
+    scrollTrigger: {
+        trigger: ".about-info h1",
+        scroller: "body",
+        start: "top 100%"
+    }
+})
