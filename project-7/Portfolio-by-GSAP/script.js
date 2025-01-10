@@ -65,12 +65,35 @@ gsap.from(".about-info h1", {
         start: "top 80%"
     }
 })
+
 gsap.from(".about-info p", {
     y: 50,
     opacity: 0,
     dleay:1,
     scrollTrigger: {
         trigger: ".about-info p",
+        scroller: "body",
+        start: "top 80%"
+    }
+})
+
+gsap.from(".connect-wrapper h1", {
+    y: 50,
+    opacity: 0,
+    dleay:1,
+    scrollTrigger: {
+        trigger: ".connect-wrapper h1",
+        scroller: "body",
+        start: "top 80%"
+    }
+})
+
+gsap.from(".connect-icon div", {
+    y: 50,
+    opacity: 0,
+    dleay:1,
+    scrollTrigger: {
+        trigger: ".connect-icon div",
         scroller: "body",
         start: "top 80%"
     }
