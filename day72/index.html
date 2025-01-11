@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scroll Translate</title>
+  <link href="https://unpkg.com/gsap@3.11.1/dist/gsap.min.js" rel="stylesheet">
+  <link href="https://unpkg.com/gsap@3.11.1/dist/ScrollTrigger.min.js" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 200vh;
+      font-family: Arial, sans-serif;
+    }
+
+    .text {
+      font-size: 3rem;
+      font-weight: bold;
+      position: relative;
+      top: 50vh;
+      transform-origin: center;
+      color: #333;
+      margin: 0 auto;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="text">Scroll to Translate Me!</div>
+
+  <script src="https://unpkg.com/gsap@3.11.1/dist/gsap.min.js"></script>
+  <script src="https://unpkg.com/gsap@3.11.1/dist/ScrollTrigger.min.js"></script>
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.to(".text", {
+      y: 500,
+      scrollTrigger: {
+        trigger: ".text",
+        start: "top bottom",
+        end: "bottom top",
+        scrub: true
+      }
+    });
+  </script>
+</body>
+</html>
