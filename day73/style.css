@@ -1,0 +1,34 @@
+/* Basic styles for the container and the box */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+  }
+  
+  .container {
+    position: relative;
+    width: 400px;
+    height: 300px;
+    border: 2px solid #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+  }
+  
+  .box {
+    width: 100px;
+    height: 100px;
+    background-color: #3498db;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
