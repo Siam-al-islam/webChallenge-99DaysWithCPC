@@ -1,0 +1,571 @@
+{
+    "trainDetails": [
+        {
+            "trainId": "T001",
+            "trainName": "Dhaka Express",
+            "departureStation": "Dhaka",
+            "arrivalStation": "Chittagong",
+            "departureTime": "2025-01-20T08:00:00",
+            "arrivalTime": "2025-01-20T14:00:00",
+            "duration": "6h",
+            "availableSeats": 120,
+            "classes": [
+                {
+                    "classType": "Economy",
+                    "fare": 500,
+                    "availableSeats": 60
+                },
+                {
+                    "classType": "Business",
+                    "fare": 1000,
+                    "availableSeats": 30
+                },
+                {
+                    "classType": "First Class",
+                    "fare": 1500,
+                    "availableSeats": 30
+                }
+            ]
+        },
+        {
+            "trainId": "T002",
+            "trainName": "Chittagong Intercity",
+            "departureStation": "Chittagong",
+            "arrivalStation": "Sylhet",
+            "departureTime": "2025-01-20T09:00:00",
+            "arrivalTime": "2025-01-20T16:00:00",
+            "duration": "7h",
+            "availableSeats": 100,
+            "classes": [
+                {
+                    "classType": "Economy",
+                    "fare": 600,
+                    "availableSeats": 50
+                },
+                {
+                    "classType": "Business",
+                    "fare": 1200,
+                    "availableSeats": 25
+                },
+                {
+                    "classType": "First Class",
+                    "fare": 1800,
+                    "availableSeats": 25
+                }
+            ]
+        },
+        {
+            "trainId": "T003",
+            "trainName": "Rajshahi Mail",
+            "departureStation": "Dhaka",
+            "arrivalStation": "Rajshahi",
+            "departureTime": "2025-01-20T10:00:00",
+            "arrivalTime": "2025-01-20T15:00:00",
+            "duration": "5h",
+            "availableSeats": 150,
+            "classes": [
+                {
+                    "classType": "Economy",
+                    "fare": 450,
+                    "availableSeats": 80
+                },
+                {
+                    "classType": "Business",
+                    "fare": 900,
+                    "availableSeats": 40
+                },
+                {
+                    "classType": "First Class",
+                    "fare": 1300,
+                    "availableSeats": 30
+                }
+            ]
+        },
+        {
+            "trainId": "T004",
+            "trainName": "Sylhet Special",
+            "departureStation": "Sylhet",
+            "arrivalStation": "Dhaka",
+            "departureTime": "2025-01-21T06:00:00",
+            "arrivalTime": "2025-01-21T13:00:00",
+            "duration": "7h",
+            "availableSeats": 90,
+            "classes": [
+                {
+                    "classType": "Economy",
+                    "fare": 550,
+                    "availableSeats": 50
+                },
+                {
+                    "classType": "Business",
+                    "fare": 1100,
+                    "availableSeats": 20
+                },
+                {
+                    "classType": "First Class",
+                    "fare": 1600,
+                    "availableSeats": 20
+                }
+            ]
+        },
+        {
+            "trainId": "T005",
+            "trainName": "Barisal Breeze",
+            "departureStation": "Barisal",
+            "arrivalStation": "Dhaka",
+            "departureTime": "2025-01-21T07:00:00",
+            "arrivalTime": "2025-01-21T12:00:00",
+            "duration": "5h",
+            "availableSeats": 110,
+            "classes": [
+                {
+                    "classType": "Economy",
+                    "fare": 500,
+                    "availableSeats": 70
+                },
+                {
+                    "classType": "Business",
+                    "fare": 950,
+                    "availableSeats": 25
+                },
+                {
+                    "classType": "First Class",
+                    "fare": 1400,
+                    "availableSeats": 15
+                }
+            ]
+        },
+        {
+            "trainId": "T006",
+            "trainName": "Comilla Comet",
+            "departureStation": "Comilla",
+            "arrivalStation": "Feni",
+            "departureTime": "2025-01-21T08:00:00",
+            "arrivalTime": "2025-01-21T10:00:00",
+            "duration": "2h",
+            "availableSeats": 80,
+            "classes": [
+                {
+                    "classType": "Economy",
+                    "fare": 300,
+                    "availableSeats": 50
+                },
+                {
+                    "classType": "Business",
+                    "fare": 600,
+                    "availableSeats": 20
+                },
+                {
+                    "classType": "First Class",
+                    "fare": 900,
+                    "availableSeats": 10
+                }
+            ]
+        },
+        {
+            "trainId": "T007",
+            "trainName": "Khulna Karnaphuli",
+            "departureStation": "Khulna",
+            "arrivalStation": "Chittagong",
+            "departureTime": "2025-01-21T09:00:00",
+            "arrivalTime": "2025-01-21T18:00:00",
+            "duration": "9h",
+            "availableSeats": 100,
+            "classes": [
+                {
+                    "classType": "Economy",
+                    "fare": 700,
+                    "availableSeats": 60
+                },
+                {
+                    "classType": "Business",
+                    "fare": 1400,
+                    "availableSeats": 30
+                },
+                {
+                    "classType": "First Class",
+                    "fare": 2000,
+                    "availableSeats": 10
+                }
+            ]
+        },
+        {
+            "trainId": "T008",
+            "trainName": "Mymensingh Marvel",
+            "departureStation": "Mymensingh",
+            "arrivalStation": "Dhaka",
+            "departureTime": "2025-01-21T10:00:00",
+            "arrivalTime": "2025-01-21T13:00:00",
+            "duration": "3h",
+            "availableSeats": 120,
+            "classes": [
+                {
+                    "classType": "Economy",
+                    "fare": 400,
+                    "availableSeats": 80
+                },
+                {
+                    "classType": "Business",
+                    "fare": 800,
+                    "availableSeats": 30
+                },
+                {
+                    "classType": "First Class",
+                    "fare": 1200,
+                    "availableSeats": 10
+                }
+            ]
+        },
+        {
+            "trainId": "T009",
+            "trainName": "Jessore Jet",
+            "departureStation": "Jessore",
+            "arrivalStation": "Khulna",
+            "departureTime": "2025-01-21T11:00:00",
+            "arrivalTime": "2025-01-21T12:30:00",
+            "duration": "1h 30m",
+            "availableSeats": 70,
+            "classes": [
+                {
+                    "classType": "Economy",
+                    "fare": 250,
+                    "availableSeats": 50
+                },
+                {
+                    "classType": "Business",
+                    "fare": 500,
+                    "availableSeats": 15
+                },
+                {
+                    "classType": "First Class",
+                    "fare": 750,
+                    "availableSeats": 5
+                }
+            ]
+        },
+        {
+            "trainId": "T010",
+            "trainName": "Rangpur Rocket",
+            "departureStation": "Rangpur",
+            "arrivalStation": "Dinajpur",
+            "departureTime": "2025-01-21T12:00:00",
+            "arrivalTime": "2025-01-21T14:30:00",
+            "duration": "2h 30m",
+            "availableSeats": 90,
+            "classes": [
+                {
+                    "classType": "Economy",
+                    "fare": 350,
+                    "availableSeats": 60
+                },
+                {
+                    "classType": "Business",
+                    "fare": 700,
+                    "availableSeats": 20
+                },
+                {
+                    "classType": "First Class",
+                    "fare": 1050,
+                    "availableSeats": 10
+                }
+            ]
+        },
+        {
+            "trainId": "T011",
+            "trainName": "Noakhali Nightline",
+            "departureStation": "Noakhali",
+            "arrivalStation": "Dhaka",
+            "departureTime": "2025-01-21T22:00:00",
+            "arrivalTime": "2025-01-22T06:00:00",
+            "duration": "8h",
+            "availableSeats": 130,
+            "classes": [
+                {
+                    "classType": "Economy",
+                    "fare": 550,
+                    "availableSeats": 80
+                },
+                {
+                    "classType": "Business",
+                    "fare": 1000,
+                    "availableSeats": 30
+                },
+                {
+                    "classType": "First Class",
+                    "fare": 1500,
+                    "availableSeats": 20
+                }
+            ]
+        },
+        {
+            "trainId": "T012",
+            "trainName": "Panchagarh Flyer",
+            "departureStation": "Panchagarh",
+            "arrivalStation": "Thakurgaon",
+            "departureTime": "2025-01-21T14:00:00",
+            "arrivalTime": "2025-01-21T15:30:00",
+            "duration": "1h 30m",
+            "availableSeats": 50,
+            "classes": [
+                {
+                    "classType": "Economy",
+                    "fare": 300,
+                    "availableSeats": 30
+                },
+                {
+                    "classType": "Business",
+                    "fare": 600,
+                    "availableSeats": 15
+                },
+                {
+                    "classType": "First Class",
+                    "fare": 900,
+                    "availableSeats": 5
+                }
+            ]
+        },
+        {
+            "trainId": "T013",
+            "trainName": "Sirajganj Sprint",
+            "departureStation": "Sirajganj",
+            "arrivalStation": "Bogura",
+            "departureTime": "2025-01-21T10:00:00",
+            "arrivalTime": "2025-01-21T11:30:00",
+            "duration": "1h 30m",
+            "availableSeats": 90,
+            "classes": [
+                {
+                    "classType": "Economy",
+                    "fare": 250,
+                    "availableSeats": 50
+                },
+                {
+                    "classType": "Business",
+                    "fare": 500,
+                    "availableSeats": 30
+                },
+                {
+                    "classType": "First Class",
+                    "fare": 750,
+                    "availableSeats": 10
+                }
+            ]
+        },
+        {
+            "trainId": "T014",
+            "trainName": "Feni Flyer",
+            "departureStation": "Feni",
+            "arrivalStation": "Chittagong",
+            "departureTime": "2025-01-21T12:00:00",
+            "arrivalTime": "2025-01-21T13:30:00",
+            "duration": "1h 30m",
+            "availableSeats": 70,
+            "classes": [
+                {
+                    "classType": "Economy",
+                    "fare": 350,
+                    "availableSeats": 40
+                },
+                {
+                    "classType": "Business",
+                    "fare": 700,
+                    "availableSeats": 20
+                },
+                {
+                    "classType": "First Class",
+                    "fare": 1050,
+                    "availableSeats": 10
+                }
+            ]
+        },
+        {
+            "trainId": "T015",
+            "trainName": "Dhaka Sundarban",
+            "departureStation": "Dhaka",
+            "arrivalStation": "Khulna",
+            "departureTime": "2025-01-21T18:00:00",
+            "arrivalTime": "2025-01-22T06:00:00",
+            "duration": "12h",
+            "availableSeats": 150,
+            "classes": [
+                {
+                    "classType": "Economy",
+                    "fare": 700,
+                    "availableSeats": 90
+                },
+                {
+                    "classType": "Business",
+                    "fare": 1400,
+                    "availableSeats": 40
+                },
+                {
+                    "classType": "First Class",
+                    "fare": 2000,
+                    "availableSeats": 20
+                }
+            ]
+        },
+        {
+            "trainId": "T016",
+            "trainName": "Lalmonirhat Local",
+            "departureStation": "Lalmonirhat",
+            "arrivalStation": "Rangpur",
+            "departureTime": "2025-01-21T14:00:00",
+            "arrivalTime": "2025-01-21T16:00:00",
+            "duration": "2h",
+            "availableSeats": 60,
+            "classes": [
+                {
+                    "classType": "Economy",
+                    "fare": 300,
+                    "availableSeats": 40
+                },
+                {
+                    "classType": "Business",
+                    "fare": 600,
+                    "availableSeats": 15
+                },
+                {
+                    "classType": "First Class",
+                    "fare": 900,
+                    "availableSeats": 5
+                }
+            ]
+        },
+        {
+            "trainId": "T017",
+            "trainName": "Moulvibazar Morning",
+            "departureStation": "Moulvibazar",
+            "arrivalStation": "Sylhet",
+            "departureTime": "2025-01-21T07:00:00",
+            "arrivalTime": "2025-01-21T08:30:00",
+            "duration": "1h 30m",
+            "availableSeats": 50,
+            "classes": [
+                {
+                    "classType": "Economy",
+                    "fare": 250,
+                    "availableSeats": 30
+                },
+                {
+                    "classType": "Business",
+                    "fare": 500,
+                    "availableSeats": 15
+                },
+                {
+                    "classType": "First Class",
+                    "fare": 750,
+                    "availableSeats": 5
+                }
+            ]
+        },
+        {
+            "trainId": "T018",
+            "trainName": "Chapai Champion",
+            "departureStation": "Chapai Nawabganj",
+            "arrivalStation": "Rajshahi",
+            "departureTime": "2025-01-21T10:00:00",
+            "arrivalTime": "2025-01-21T11:30:00",
+            "duration": "1h 30m",
+            "availableSeats": 70,
+            "classes": [
+                {
+                    "classType": "Economy",
+                    "fare": 300,
+                    "availableSeats": 50
+                },
+                {
+                    "classType": "Business",
+                    "fare": 600,
+                    "availableSeats": 15
+                },
+                {
+                    "classType": "First Class",
+                    "fare": 900,
+                    "availableSeats": 5
+                }
+            ]
+        },
+        {
+            "trainId": "T019",
+            "trainName": "Khagrachari Korner",
+            "departureStation": "Khagrachari",
+            "arrivalStation": "Chittagong",
+            "departureTime": "2025-01-21T16:00:00",
+            "arrivalTime": "2025-01-21T20:00:00",
+            "duration": "4h",
+            "availableSeats": 80,
+            "classes": [
+                {
+                    "classType": "Economy",
+                    "fare": 400,
+                    "availableSeats": 50
+                },
+                {
+                    "classType": "Business",
+                    "fare": 800,
+                    "availableSeats": 20
+                },
+                {
+                    "classType": "First Class",
+                    "fare": 1200,
+                    "availableSeats": 10
+                }
+            ]
+        },
+        {
+            "trainId": "T020",
+            "trainName": "Dinajpur Day",
+            "departureStation": "Dinajpur",
+            "arrivalStation": "Rangpur",
+            "departureTime": "2025-01-21T12:00:00",
+            "arrivalTime": "2025-01-21T14:00:00",
+            "duration": "2h",
+            "availableSeats": 100,
+            "classes": [
+                {
+                    "classType": "Economy",
+                    "fare": 350,
+                    "availableSeats": 60
+                },
+                {
+                    "classType": "Business",
+                    "fare": 700,
+                    "availableSeats": 30
+                },
+                {
+                    "classType": "First Class",
+                    "fare": 1050,
+                    "availableSeats": 10
+                }
+            ]
+        },
+        {
+            "trainId": "T021",
+            "trainName": "Dhaka Rajshahi",
+            "departureStation": "Dhaka",
+            "arrivalStation": "Rajshahi",
+            "departureTime": "2025-01-22T10:00:00",
+            "arrivalTime": "2025-01-22T15:00:00",
+            "duration": "5h",
+            "availableSeats": 150,
+            "classes": [
+                {
+                    "classType": "Economy",
+                    "fare": 350,
+                    "availableSeats": 60
+                },
+                {
+                    "classType": "Business",
+                    "fare": 700,
+                    "availableSeats": 30
+                },
+                {
+                    "classType": "First Class",
+                    "fare": 1050,
+                    "availableSeats": 10
+                }
+            ]
+        }
+    ]
+}
