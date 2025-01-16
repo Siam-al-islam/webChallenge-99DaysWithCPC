@@ -17,22 +17,103 @@
         rel="stylesheet">
 </head>
 
-<body class="bg-gray-100">
-    <nav class="text-white shadow-lg">
-        <div class="container mx-auto flex justify-between items-center py-4 px-6">
-            <div class="flex text-2xl font-medium">
+<body">
+    <!-- navbar start -->
+    <nav class="text-white shadow-md bg-[#ffff]">
+        <div class="flex justify-between items-center py-4 px-6 max-w-screen-xl mx-auto">
+            <div class="flex font-semibold items-center gap-4">
                 <img class="w-[60px]" src="https://i.ibb.co.com/BrYvKnp/Bangladesh-Railway-logo1-removebg-preview.png"
                     alt="">
-                <h1 class="text-[#da924e]">Bangladesh <br>Railway</h1>
+                <h1 class="text-[#da924e] text-xl">Bangladesh <br>Railway</h1>
             </div>
-            <ul class="flex gap-8 font-semibold">
-                <li><a href="#home" class="text-black">Home</a></li>
-                <li><a href="#book" class="text-black">Book Ticket</a></li>
-                <li><a href="#contact" class="text-black">Contact Us</a></li>
-                <li><a href="#contact" class="text-black">Login</a></li>
+            <ul class="flex gap-8 text-black">
+                <li><a href="" class="">Home</a></li>
+                <li><a href="" class="">Verify Ticket</a></li>
+                <li><a href="" class="">Train Information</a></li>
+                <li><a href="" class="">Contact Us</a></li>
+                <li><a href="" class="">Login</a></li>
             </ul>
         </div>
     </nav>
-</body>
+    <!-- choose destination -->
+    <div class="mt-20">
+        <div class="max-w-[700px] mx-auto">
+            <!-- 1st row  -->
+            <div class="flex gap-10 items-center justify-center">
+                <div class="flex-1">
+                    <label for="from">From</label>
+                    <br>
+                    <select class="border border-gray-400 mt-2 px-4 py-1  w-full rounded-lg" id="from">
+                        <option value="" disabled selected>From Station</option>
+                        <option value="Dhaka">Dhaka</option>
+                        <option value="Chittagong">Chittagong</option>
+                        <option value="Sylhet">Sylhet</option>
+                        <option value="Barisal">Barisal</option>
+                        <option value="Comilla">Comilla</option>
+                        <option value="Khulna">Khulna</option>
+                        <option value="Mymensingh">Mymensingh</option>
+                        <option value="Jessore">Jessore</option>
+                        <option value="Rangpur">Rangpur</option>
+                        <option value="Noakhali">Noakhali</option>
+                        <option value="Panchagarh">Panchagarh</option>
+                        <option value="Sirajganj">Sirajganj</option>
+                        <option value="Feni">Feni</option>
+                        <option value="Lalmonirhat">Lalmonirhat</option>
+                        <option value="Moulvibazar">Moulvibazar</option>
+                        <option value="Chapai Nawabganj">Chapai Nawabganj</option>
+                        <option value="Khagrachari">Khagrachari</option>
+                    </select>
+                </div>
+                <div class="flex-1">
+                    <label for="to">To</label>
+                    <br>
+                    <select class="border border-gray-400 mt-2 px-4 py-1 w-full rounded-lg" id="to">
+                        <option value="" disabled selected>To Station</option>
+                        <option value="Dhaka">Dhaka</option>
+                        <option value="Chittagong">Chittagong</option>
+                        <option value="Sylhet">Sylhet</option>
+                        <option value="Barisal">Barisal</option>
+                        <option value="Comilla">Comilla</option>
+                        <option value="Khulna">Khulna</option>
+                        <option value="Mymensingh">Mymensingh</option>
+                        <option value="Jessore">Jessore</option>
+                        <option value="Rangpur">Rangpur</option>
+                        <option value="Noakhali">Noakhali</option>
+                        <option value="Panchagarh">Panchagarh</option>
+                        <option value="Sirajganj">Sirajganj</option>
+                        <option value="Feni">Feni</option>
+                        <option value="Lalmonirhat">Lalmonirhat</option>
+                        <option value="Moulvibazar">Moulvibazar</option>
+                        <option value="Chapai Nawabganj">Chapai Nawabganj</option>
+                        <option value="Khagrachari">Khagrachari</option>
+                    </select>
+                </div>
+            </div>
+            <!-- 2nd row -->
+            <div class="flex gap-10 items-center justify-center mt-6">
+                <div class="flex-1">
+                    <label for="date">Date of Journey</label>
+                    <br>
+                    <input class="border border-gray-400 mt-2 px-4 py-1 w-full rounded-lg" type="date" name=""
+                        id="date">
+                </div>
+                <div class="flex-1">
+                    <label for="classType">Choose Class</label>
+                    <br>
+                    <select class="border border-gray-400 mt-2 px-4 py-1 w-full rounded-lg" id="classType">
+                        <option value="" disabled selected>Choose a Class</option>
+                        <option value="Economy">Economy</option>
+                        <option value="Business">Business</option>
+                        <option value="First Class">First Class</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <button class="uppercase bg-[#006747] text-white w-full rounded font-semibold h-10 mt-8">Search
+                    Train</button>
+            </div>
+        </div>
+    </div>
+    </body>
 
 </html>
