@@ -21,14 +21,28 @@
 
 <body>
     <!-- navbar start -->
-    <nav class="text-white shadow-md bg-[#ffff]">
+    <nav class="text-white shadow-md bg-[#ffff] sticky top-0 px-2">
         <div class="flex justify-between items-center py-3 max-w-screen-xl mx-auto">
             <div class="flex font-semibold items-center gap-3">
                 <img class="w-[60px]" src="https://eticket.railway.gov.bd/assets/img/home/bangladesh-railway.png"
                     alt="">
                 <h1 class="text-[#da924e] text-xl">Bangladesh <br>Railway</h1>
             </div>
-            <ul class="flex gap-8 text-black">
+            <ul class="hidden md:flex gap-8 text-black">
+                <li><a href="" class="">Home</a></li>
+                <li><a href="" class="">Verify Ticket</a></li>
+                <li><a href="" class="">Train Information</a></li>
+                <li><a href="" class="">Contact Us</a></li>
+                <li><a href="" class="">Login</a></li>
+            </ul>
+            <div class="w-fit cursor-pointer md:hidden block navbar-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 30 30">
+                    <path
+                        d="M 3 7 A 1.0001 1.0001 0 1 0 3 9 L 27 9 A 1.0001 1.0001 0 1 0 27 7 L 3 7 z M 3 14 A 1.0001 1.0001 0 1 0 3 16 L 27 16 A 1.0001 1.0001 0 1 0 27 14 L 3 14 z M 3 21 A 1.0001 1.0001 0 1 0 3 23 L 27 23 A 1.0001 1.0001 0 1 0 27 21 L 3 21 z">
+                    </path>
+                </svg>
+            </div>
+            <ul class="hidden absolute top-20 right-0 space-y-4 bg-green-700 text-white p-6 navbar-list rounded-lg">
                 <li><a href="" class="">Home</a></li>
                 <li><a href="" class="">Verify Ticket</a></li>
                 <li><a href="" class="">Train Information</a></li>
@@ -37,7 +51,7 @@
             </ul>
         </div>
     </nav>
-    <main class="max-w-screen-xl mx-auto ">
+    <main class="max-w-screen-xl mx-auto px-2">
         <!-- choose destination -->
         <div class="mt-20">
             <div class="max-w-[700px] mx-auto">
@@ -138,7 +152,7 @@
             </div>
         </div>
         <!-- Instructions to Purchase Tickets -->
-        <div class="flex gap-20 items-center mt-32">
+        <div class="lg:flex gap-10 lg:gap-20 items-center mt-20 md:mt-32">
             <div class="">
                 <img src="https://eticket.railway.gov.bd/assets/img/home/instruction-secion-image.png" alt="">
             </div>
@@ -200,6 +214,43 @@
             </div>
         </div>
     </main>
+    <!-- payment methods -->
+    <div
+        class="flex items-center justify-center gap-10 payment-methods py-8 mt-20 mb-10 border-t border-b border-gray-400 flex-wrap">
+        <img src="https://eticket.railway.gov.bd/assets/img/bkash-home.png" alt="">
+        <img src="https://eticket.railway.gov.bd/assets/img/nagad-32.png" alt="">
+        <img src="https://eticket.railway.gov.bd/assets/img/nexus-debit-home.svg" alt="">
+        <img src="https://eticket.railway.gov.bd/assets/img/master-card-home.png" alt="">
+        <img src="https://eticket.railway.gov.bd/assets/img/visa-home.png" alt="">
+        <img src="https://eticket.railway.gov.bd/assets/img/upay-home.svg" alt="">
+        <img src="https://eticket.railway.gov.bd/assets/img/rocket-home.svg" alt="">
+    </div>
+    <div class="mt-12 text-xs font-bold max-w-screen-xl mx-auto">
+        <p class="text-center">The tickets are issued by Bangladesh Railway Integrated Ticketing System (BRITS) and
+            Shohoz-Synesis-Vincen JV is responsible for designing, development, implementation, technical operation
+            & maintenance of the system.</p>
+    </div>
+    <footer class="mt-16 py-8 bg-[#F6F9FF] border-t-4 border-t-[#079d49]">
+        <div class="text-xs flex items-center justify-between max-w-screen-xl mx-auto">
+            <div class="font-semibold">
+                <h3 class="text-[#006747]">Cloned by</h3>
+                <h2 class="text-base">Siam Al Islam</h2>
+            </div>
+            <div>
+                <p class="font-bold text-[#006747]">Terms and Conditions | Privacy Policy</p>
+            </div>
+            <div class="flex font-semibold items-center gap-2">
+                <img class="w-[60px]" src="https://eticket.railway.gov.bd/assets/img/home/bangladesh-railway.png"
+                    alt="">
+                <div>
+                    <h1 class="text-[#da924e] text-base">Bangladesh Railway</h1>
+                    <p class="mt-2">নিরাপদ . আরামদায়ক . সাশ্রয়ী</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
 </body>
 
 </html>
