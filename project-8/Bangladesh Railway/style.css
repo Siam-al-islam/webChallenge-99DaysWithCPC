@@ -11,3 +11,9 @@ body {
 .payment-methods img {
     width: 80px;
 }
+
+.train-card {
+    border: 2px solid #006747;
+    width: 140px;
+    border-radius: 5px;
+}
