@@ -11,12 +11,16 @@ const selectFrom = document.querySelector("#from");
 const selectTo = document.querySelector("#to");
 const searchBtn = document.querySelector("#searchBtn");
 const trainContainer = document.querySelector("#train-container");
+const trainCardContainer = document.querySelector("#train-card-container");
 
 const getTrains = async () => {
     const res = await fetch("data.json");
     const data = await res.json();
-    console.log(data.trainDetails);
+    if (!data) {
+        console.log("not found");
+    }
     trainContainer.innerHTML = "";
+    trainCardContainer.innerHTML = "";
 
     const htmlStr = `
         <div class="mt-10">
@@ -31,8 +35,6 @@ const getTrains = async () => {
 
     data.trainDetails.forEach(trains => {
         if (trains.departureStation == selectFrom.value && trains.arrivalStation == selectTo.value) {
-            console.log(trains.trainName);
-
             const trainInfo = `
                 <div class="flex mt-10">
                     <div class="">
@@ -49,29 +51,28 @@ const getTrains = async () => {
             `;
             trainContainer.insertAdjacentHTML("beforeend", trainInfo);
 
+            // dynamic train card
             trains.classes.forEach((classData) => {
                 const trainCard = `
-                    <div class="mt-10">
-                        <div>
-                            <div class="train-card mt-8">
-                                <div class="bg-[#e2e8e7] p-3">
-                                    <h2 class="text-[18px] font-semibold">${classData.classType}</h2> <!-- Class Type -->
-                                    <h2 class="text-[#006747] font-semibold mt-1">৳ <span>${classData.fare}</span></h2> <!-- Fare -->
-                                    <p class="text-xs font-semibold">including VAT</p>
-                                </div>
-                                <div class="bg-[#d2dddb] p-2">
-                                    <p class="text-[10px]">Available Tickets (Counter + Online) <br>
-                                        <span class="text-base font-bold text-[#006747]">${classData.availableSeats}</span>
-                                    </p>
-                                    <button
-                                        class="mt-2 bg-[#006747] uppercase font-semibold text-xs w-full py-1 text-white rounded-full">Book Now</button>
-                                </div>
+                    <div class="mt-4">
+                        <div class="train-card mt-8">
+                            <div class="bg-[#e2e8e7] p-3">
+                                <h2 class="text-[18px] font-semibold">${classData.classType}</h2> <!-- Class Type -->
+                                <h2 class="text-[#006747] font-semibold mt-1">৳ <span>${classData.fare}</span></h2> <!-- Fare -->
+                                <p class="text-xs font-semibold">including VAT</p>
+                            </div>
+                            <div class="bg-[#d2dddb] p-2">
+                                <p class="text-[10px]">Available Tickets (Counter + Online) <br>
+                                    <span class="text-base font-bold text-[#006747]">${classData.availableSeats}</span>
+                                </p>
+                                <button
+                                    class="mt-2 bg-[#006747] uppercase font-semibold text-xs w-full py-1 text-white rounded-full">Book Now</button>
                             </div>
                         </div>
                     </div>
                 `;
 
-                trainContainer.insertAdjacentHTML("beforeend", trainCard);
+                trainCardContainer.insertAdjacentHTML("beforeend", trainCard);
             });
         }
     });
