@@ -1,0 +1,92 @@
+[
+    {
+        "id": 1,
+        "image": "https://example.com/image1.jpg",
+        "category": "Technology",
+        "blog_title": "The Future of AI",
+        "blog_description": "Artificial intelligence is no longer just a buzzword; it is rapidly transforming industries ranging from healthcare to transportation. In this blog, we delve into how AI is enhancing efficiency, solving complex problems, and even creating new ethical dilemmas. From autonomous vehicles to personalized medicine, the future of AI holds immense potential, but it also raises questions about privacy, security, and its impact on the job market.",
+        "author_name": "John Doe",
+        "author_profile": "https://example.com/authors/john-doe.jpg",
+        "upload_date": "2025-01-20"
+    },
+    {
+        "id": 2,
+        "image": "https://example.com/image2.jpg",
+        "category": "Health",
+        "blog_title": "10 Tips for a Healthier Life",
+        "blog_description": "Living a healthy life goes beyond just exercising and eating right. This blog provides a comprehensive guide to adopting habits that boost physical, mental, and emotional well-being. From managing stress and getting enough sleep to staying hydrated and nurturing positive relationships, discover simple yet impactful changes you can make to lead a happier, healthier life.",
+        "author_name": "Jane Smith",
+        "author_profile": "https://example.com/authors/jane-smith.jpg",
+        "upload_date": "2025-01-19"
+    },
+    {
+        "id": 3,
+        "image": "https://example.com/image3.jpg",
+        "category": "Travel",
+        "blog_title": "Top Destinations for 2025",
+        "blog_description": "Travel enthusiasts, rejoice! This year’s must-visit destinations include hidden gems and popular favorites from around the globe. Whether you’re looking for pristine beaches, bustling cities, or remote mountain getaways, we’ve curated a list of the best places to visit in 2025. Discover cultural landmarks, unique cuisines, and travel tips to make the most of your journey.",
+        "author_name": "Alex Johnson",
+        "author_profile": "https://example.com/authors/alex-johnson.jpg",
+        "upload_date": "2025-01-18"
+    },
+    {
+        "id": 4,
+        "image": "https://example.com/image4.jpg",
+        "category": "Education",
+        "blog_title": "Online Learning: Pros and Cons",
+        "blog_description": "With the rise of online education, students and professionals now have access to learning like never before. But how does online learning compare to traditional classroom settings? This blog explores the benefits of flexibility, accessibility, and diverse course options, while also addressing challenges like lack of face-to-face interaction and motivation issues. Find out whether online learning is the right fit for you.",
+        "author_name": "Emily Davis",
+        "author_profile": "https://example.com/authors/emily-davis.jpg",
+        "upload_date": "2025-01-17"
+    },
+    {
+        "id": 5,
+        "image": "https://example.com/image5.jpg",
+        "category": "Finance",
+        "blog_title": "Investing 101: A Beginner’s Guide",
+        "blog_description": "Stepping into the world of investments can feel intimidating, but this guide simplifies the process for beginners. Learn about different types of investments, such as stocks, bonds, and mutual funds. Discover tips on assessing risks, setting financial goals, and building a diversified portfolio. Whether you're planning for retirement or just looking to grow your wealth, this blog has something for everyone.",
+        "author_name": "Michael Brown",
+        "author_profile": "https://example.com/authors/michael-brown.jpg",
+        "upload_date": "2025-01-16"
+    },
+    {
+        "id": 6,
+        "image": "https://example.com/image6.jpg",
+        "category": "Lifestyle",
+        "blog_title": "Minimalism: Living with Less",
+        "blog_description": "Minimalism is more than just a trend; it’s a lifestyle that promotes clarity, intentionality, and peace of mind. In this blog, we discuss how adopting minimalism can help you reduce stress, save money, and create a more meaningful life. Learn practical steps to declutter your home, streamline your wardrobe, and focus on what truly matters.",
+        "author_name": "Sarah Thompson",
+        "author_profile": "https://example.com/authors/sarah-thompson.jpg",
+        "upload_date": "2025-01-15"
+    },
+    {
+        "id": 7,
+        "image": "https://example.com/image7.jpg",
+        "category": "Business",
+        "blog_title": "How to Build a Successful Startup",
+        "blog_description": "Starting a business is exciting but challenging. This blog provides a step-by-step guide to launching your startup, from developing a business plan and securing funding to marketing your product and scaling your operations. Learn from real-world examples and gain insights into what it takes to succeed in a competitive market.",
+        "author_name": "David Lee",
+        "author_profile": "https://example.com/authors/david-lee.jpg",
+        "upload_date": "2025-01-14"
+    },
+    {
+        "id": 8,
+        "image": "https://example.com/image8.jpg",
+        "category": "Environment",
+        "blog_title": "The Importance of Sustainable Living",
+        "blog_description": "As climate change continues to impact our planet, sustainable living is more important than ever. This blog explores simple ways individuals can reduce their carbon footprint, conserve resources, and make eco-friendly choices. From using renewable energy to adopting a zero-waste lifestyle, find actionable tips to contribute to a greener future.",
+        "author_name": "Olivia Martinez",
+        "author_profile": "https://example.com/authors/olivia-martinez.jpg",
+        "upload_date": "2025-01-13"
+    },
+    {
+        "id": 9,
+        "image": "https://example.com/image9.jpg",
+        "category": "Entertainment",
+        "blog_title": "The Evolution of Streaming Services",
+        "blog_description": "Streaming platforms have revolutionized how we consume entertainment. This blog takes a look at the journey of streaming services, from their inception to their current dominance over traditional TV. Learn about the major players, technological advancements, and how the rise of streaming has changed the way we watch movies, shows, and live events.",
+        "author_name": "Chris Evans",
+        "author_profile": "https://example.com/authors/chris-evans.jpg",
+        "upload_date": "2025-01-12"
+    }
+]
