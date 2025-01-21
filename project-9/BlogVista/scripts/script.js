@@ -20,9 +20,9 @@ const showBlogs = async () => {
     if (data) {
         data.forEach((blog, index) => {
             const blogsStr = `
-                <div class="border border-[#E8E8EA] rounded-xl p-4 w-full">
-                    <div>
-                        <img class="rounded-md w-full object-cover" src="${blog.image}" alt="">
+                <div class="border border-[#E8E8EA] rounded-xl p-4 w-full blog-card">
+                    <div class="blog-image-wrapper">
+                        <img class="rounded-md w-full object-cover blog-image" src="${blog.image}" alt="">
                     </div>
                     <div class="mt-6">
                         <h3 class="text-xs text-[#4B6BFB] bg-[#4b6bfb10] px-3 py-1 rounded-md w-fit font-medium">

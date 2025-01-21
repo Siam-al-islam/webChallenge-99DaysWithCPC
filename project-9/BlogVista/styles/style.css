@@ -8,6 +8,18 @@ body {
     font-family: "Poppins", serif;
 }
 
+.blog-image-wrapper {
+    overflow: hidden;
+}
+
+.blog-image {
+    transition: .5s;
+}
+
+.blog-card:hover .blog-image {
+    transform: scale(1.1);
+}
+
 #read-more-btn:hover {
     background-color: white;
     border: 1px solid black;
