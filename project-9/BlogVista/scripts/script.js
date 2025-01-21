@@ -31,7 +31,7 @@ const showBlogs = async () => {
                         <h2 class="mt-4 font-semibold text-2xl">
                             ${blog.blog_title}
                         </h2>
-                        <button data-index="${index}" id="read-more-btn" class="mt-4 w-full text-white font-bold py-2 rounded-xl bg-[#000000]">Read More</button>
+                        <button data-index="${index}" id="read-more-btn" class="border transition-all mt-4 w-full text-white font-bold py-2 rounded-xl bg-[#000000]">Read More</button>
                         <div class="flex items-center gap-5 text-[#97989F] mt-6">
                             <div class="flex items-center gap-3">
                                 <img src="${blog.author_profile}" alt="">
@@ -48,13 +48,14 @@ const showBlogs = async () => {
             blogsContainer.insertAdjacentHTML("beforeend", blogsStr);
         });
 
+        // read more button functionality
         document.querySelectorAll("#read-more-btn").forEach(btn => {
             btn.addEventListener('click', (e) => {
                 const blogIndex = e.target.dataset.index;
                 const blog = data[blogIndex];
 
                 blogContent.innerHTML = `
-                <div>
+                <div class="transition">
                     <img class="w-full mt-6" src="${blog.image}" alt="">
                     <h3 class="text-[#4B6BFB] bg-[#4b6bfb10] px-3 py-1 rounded-md w-fit font-medium mt-4">
                             ${blog.category}
