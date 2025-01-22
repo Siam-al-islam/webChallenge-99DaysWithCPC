@@ -56,6 +56,7 @@ const showBlogs = async () => {
 
                 blogContent.innerHTML = `
                 <div class="transition">
+                    <h1 class="text-2xl font-bold">Blog Details</h1>
                     <img class="w-full mt-6" src="${blog.image}" alt="">
                     <h3 class="text-[#4B6BFB] bg-[#4b6bfb10] px-3 py-1 rounded-md w-fit font-medium mt-4">
                             ${blog.category}
@@ -82,5 +83,8 @@ closeModal.addEventListener("click", () => {
     modal.classList.add("hidden");
 });
 
+showBlogs();
 
-showBlogs()
+//write blog button functionality
+
+const writeBlogBtn = document.querySelector("#write-blog-btn");
