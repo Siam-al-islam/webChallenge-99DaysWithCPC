@@ -114,7 +114,7 @@
                     Post</button>
             </div>
         </section>
-        <!-- Blod Modal Structure -->
+        <!-- Blog Modal Structure -->
         <div id="blog-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 overflow-y-auto">
             <div class="bg-white rounded-lg p-6 relative flex justify-center items-center  max-w-[700px] mx-auto mt-6">
                 <!-- Close Button -->
@@ -126,14 +126,13 @@
             </div>
         </div>
         <!-- Blog write Modal -->
-        <div id="blog-write-modal" class="fixed inset-0 bg-black bg-opacity-50 overflow-y-auto">
-            <div class="bg-white rounded-lg max-w-[700px] mx-auto mt-6 flex justify-center items-center p-8">
-                <!-- close button  -->
-                <button id="close-modal" class="absolute top-4 right-4 text-black text-2xl font-bold">&times;</button>
+        <div id="blog-write-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 overflow-y-auto px-2">
+            <div class="bg-white rounded-lg max-w-[900px] mx-auto mt-10 flex justify-center items-center p-4 md:p-8">
                 <!-- writing content  -->
-                <div class="mt-4 w-full">
-                    <h1 class="text-2xl font-semibold">Write your Blog</h1>
-                    <div class="mt-6 text-center">
+                <div class="w-full">
+                    <h1 class="text-2xl font-semibold text-center">Create your Blog</h1>
+                    <!-- Poster -->
+                    <div class="mt-8 text-center">
                         <label for="imageInput" class="font-semibold custom-file-label">Upload Poster</label>
                         <input id="imageInput" accept="Image/*"
                             class="h-9 px-2 py-2 w-full mt-2 bg-[#7a92ff] rounded-lg text-center shadow-sm focus:outline-0"
@@ -141,11 +140,51 @@
                     </div>
                     <!-- title  -->
                     <div class="mt-4">
-                        <label for="blog-title-input" class="font-semibold">Blog Title</label>
-                        <input id="blog-title-input"
+                        <label for="blog-title" class="font-semibold">Blog Title</label>
+                        <input id="blog-title"
                             class="h-9 px-2 py-2 w-full mt-2 bg-[#dfdfdfc0] rounded-lg text-center shadow-sm focus:outline-0"
                             placeholder="Write Blog Title" type="text">
                     </div>
+                    <!-- category  -->
+                    <div class="mt-4">
+                        <label for="blog-category" class="font-semibold">Blog Category</label>
+                        <input id="blog-category"
+                            class="h-9 px-2 py-2 w-full mt-2 bg-[#dfdfdfc0] rounded-lg text-center shadow-sm focus:outline-0"
+                            placeholder="Write Blog Category" type="text">
+                    </div>
+                    <!-- date -->
+                    <div class="mt-4">
+                        <label for="blog-date" class="font-semibold">Select Date</label>
+                        <input id="blog-date"
+                            class="h-9 px-2 py-2 w-full mt-2 bg-[#dfdfdfc0] rounded-lg text-center shadow-sm focus:outline-0"
+                            placeholder="Write Blog Category" type="date">
+                    </div>
+                    <!-- Description -->
+                    <div class="mt-4">
+                        <label for="blog-description" class="font-semibold">Blog Description</label>
+                        <textarea id="blog-description"
+                            class="px-2 py-2 w-full mt-2 bg-[#dfdfdfc0] rounded-lg shadow-sm focus:outline-0"
+                            placeholder="Write Blog Description" type="text" cols="50" rows="4"></textarea>
+                    </div>
+                    <!-- Author -->
+                    <div class="mt-4 flex items-center gap-5 justify-between">
+                        <div class="flex-1">
+                            <label for="blog-category" class="font-semibold">Author Name</label>
+                            <input id="blog-category"
+                                class="h-9 px-2 py-2 w-full mt-2 bg-[#dfdfdfc0] rounded-lg text-center shadow-sm focus:outline-0"
+                                placeholder="Write Author Name" type="text">
+                        </div>
+                        <div class="mt-8 text-center">
+                            <label for="AuthorimageInput" class="font-semibold custom-file-label">Upload Author
+                                Profile</label>
+                            <input id="AuthorimageInput" accept="Image/*"
+                                class="h-9 px-2 py-2 w-full mt-2 bg-[#7a92ff] rounded-lg text-center shadow-sm focus:outline-0"
+                                placeholder="Write Blog Title" type="file">
+                        </div>
+                    </div>
+                    <!-- submit Button  -->
+                    <button
+                        class="bg-[#6c63ff] text-white font-semibold w-full mt-8 py-2 rounded-lg uppercase">Submit</button>
                 </div>
             </div>
         </div>
