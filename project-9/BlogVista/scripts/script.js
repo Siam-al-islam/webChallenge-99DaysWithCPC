@@ -86,5 +86,12 @@ closeModal.addEventListener("click", () => {
 showBlogs();
 
 //write blog button functionality
+const blogEditorModal = document.querySelector("#blog-editor-modal");
 
-const writeBlogBtn = document.querySelector("#write-blog-btn");
+const openBlogEditor = () => {
+    blogEditorModal.classList.remove("hidden");
+}
+
+const closeBlogEditor = () => {
+    blogEditorModal.classList.add("hidden")
+}
