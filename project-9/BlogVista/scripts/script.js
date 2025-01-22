@@ -15,7 +15,6 @@ const blogContent = document.querySelector("#blog-content");
 const showBlogs = async () => {
     const res = await fetch("blogs.json");
     const data = await res.json();
-    console.log(data);
 
     if (data) {
         data.forEach((blog, index) => {
