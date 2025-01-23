@@ -97,8 +97,6 @@ const closeBlogEditor = () => {
 
 // ------------- post blog functionality ----------------
 
-let blogs = [];
-
 // image upload 
 let posterUploadBtn = document.querySelector("#imageInput");
 let posterImage = document.querySelector("#poster-photo");
@@ -123,8 +121,11 @@ authorImageInput.onchange = () => {
 
 const postBtn = document.querySelector("#post-btn");
 const userPostsContainer = document.querySelector("#user-posts-container");
+let blogs = [];
 
 postBtn.addEventListener('click', () => {
+    blogEditorModal.classList.add("hidden");
+
     const blogData = {
         poster: posterImage.src,
         title: blogTitle.value,
@@ -135,8 +136,10 @@ postBtn.addEventListener('click', () => {
         author_image: authorImage.src
     };
 
-    blogs.push(blogData);
+    blogs.push(...[blogData]);
     console.log(blogs);
+
+    userPostsContainer.innerHTML = "";
 
     blogs.forEach((blog, index) => {
         const blogsStr = `
