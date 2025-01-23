@@ -21,7 +21,7 @@ const showBlogs = async () => {
             const blogsStr = `
                 <div class="border border-[#E8E8EA] rounded-xl p-4 w-full blog-card">
                     <div class="blog-image-wrapper">
-                        <img class="rounded-md w-full object-cover blog-image" src="${blog.image}" alt="">
+                        <img class="rounded-md w-full object-cover blog-image max-h-[250px]" src="${blog.image ? blog.image : "https://i.ibb.co.com/p0tnG2v/360-F-470299797-UD0eo-VMMSUb-HCc-NJCdv2t8-B2g1-GVq-Ygs.jpg"}" alt="">
                     </div>
                     <div class="mt-6">
                         <h3 class="text-xs text-[#4B6BFB] bg-[#4b6bfb10] px-3 py-1 rounded-md w-fit font-medium">
@@ -93,4 +93,12 @@ const openBlogEditor = () => {
 
 const closeBlogEditor = () => {
     blogEditorModal.classList.add("hidden")
+}
+
+//poster upload functionality
+let posterUploadBtn = document.querySelector(".posterImageInput");
+let posterImage = document.querySelector("#poster-photo");
+
+posterUploadBtn.onchange = () => {
+    posterImage.src = URL.createObjectURL(posterUploadBtn.files[0]);
 }

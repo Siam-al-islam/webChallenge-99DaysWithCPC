@@ -84,7 +84,7 @@
         <section class="mt-32">
             <div>
                 <button onclick="openBlogEditor()" id="write-blog-btn"
-                    class="bg-[#7a92ff] text-white font-semibold py-2 w-full rounded-xl uppercase flex items-center justify-center gap-2">Write
+                    class="bg-[#7a92ff] text-white font-semibold py-2 w-full rounded-xl uppercase flex items-center justify-center gap-2">Post
                     Your Own
                     Blog
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="Write" class="w-6">
@@ -135,13 +135,18 @@
                             d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" />
                     </svg>
                 </div>
+
                 <!-- writing content  -->
                 <div class="w-full">
                     <h1 class="text-2xl font-semibold text-center">Create your Blog</h1>
                     <!-- Poster -->
-                    <div class="mt-8 text-center">
-                        <label for="imageInput" class="font-semibold custom-file-label">Upload Poster</label>
-                        <input id="imageInput" accept="Image/*"
+                    <img class="mx-auto mt-8 max-h-[250px]" id="poster-photo"
+                        src="https://i.ibb.co.com/p0tnG2v/360-F-470299797-UD0eo-VMMSUb-HCc-NJCdv2t8-B2g1-GVq-Ygs.jpg"
+                        alt="">
+                    <div class="mt-4 text-center">
+                        <label for="imageInput" class="font-semibold custom-file-label posterImageInput">Upload
+                            Poster</label>
+                        <input id="imageInput" accept="image/*"
                             class="h-9 px-2 py-2 w-full mt-2 bg-[#7a92ff] rounded-lg text-center shadow-sm focus:outline-0"
                             placeholder="Write Blog Title" type="file">
                     </div>
