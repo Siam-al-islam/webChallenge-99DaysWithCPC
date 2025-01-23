@@ -127,7 +127,7 @@
         </div>
         <!-- Blog write Modal -->
         <div id="blog-editor-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 overflow-y-auto px-2">
-            <div class="bg-white rounded-lg max-w-[900px] mx-auto mt-6 p-4 md:p-8">
+            <div class="bg-white rounded-lg max-w-[900px] mx-auto mt-6 mb-6 p-4 md:p-8">
                 <!-- close arrow  -->
                 <div onclick="closeBlogEditor()" class="w-fit">
                     <svg class="w-6 cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -144,11 +144,11 @@
                         src="https://i.ibb.co.com/p0tnG2v/360-F-470299797-UD0eo-VMMSUb-HCc-NJCdv2t8-B2g1-GVq-Ygs.jpg"
                         alt="">
                     <div class="mt-4 text-center">
-                        <label for="imageInput" class="font-semibold custom-file-label posterImageInput">Upload
+                        <label for="imageInput" class="font-semibold custom-file-label">Upload
                             Poster</label>
                         <input id="imageInput" accept="image/*"
                             class="h-9 px-2 py-2 w-full mt-2 bg-[#7a92ff] rounded-lg text-center shadow-sm focus:outline-0"
-                            placeholder="Write Blog Title" type="file">
+                            placeholder="" type="file">
                     </div>
                     <!-- title  -->
                     <div class="mt-4">
@@ -180,18 +180,23 @@
                     </div>
                     <!-- Author -->
                     <div class="mt-4 flex items-center gap-5 justify-between">
-                        <div class="flex-1">
-                            <label for="blog-category" class="font-semibold">Author Name</label>
-                            <input id="blog-category"
+                        <div class="w-2/4">
+                            <label for="author-name" class="font-semibold">Author Name</label>
+                            <input id="author-name"
                                 class="h-9 px-2 py-2 w-full mt-2 bg-[#dfdfdfc0] rounded-lg text-center shadow-sm focus:outline-0"
                                 placeholder="Write Author Name" type="text">
                         </div>
-                        <div class="mt-8 text-center">
-                            <label for="AuthorimageInput" class="font-semibold custom-file-label">Upload Author
-                                Profile</label>
-                            <input id="AuthorimageInput" accept="Image/*"
-                                class="h-9 px-2 py-2 w-full mt-2 bg-[#7a92ff] rounded-lg text-center shadow-sm focus:outline-0"
-                                placeholder="Write Blog Title" type="file">
+                        <div class="flex items-center gap-3 mt-8">
+                            <img id="author-image" class="w-12 h-12 rounded-full"
+                                src="https://i.ibb.co.com/3d2f5sB/user-profile-icon-vector-avatar-600nw-2220431045.webp"
+                                alt="">
+                            <div class="text-center">
+                                <label for="authorimageInput" class="font-semibold custom-file-label">Upload Author
+                                    Profile</label>
+                                <input id="authorimageInput" accept="image/*"
+                                    class="h-9 px-2 py-2 w-full mt-2 bg-[#7a92ff] rounded-lg text-center shadow-sm focus:outline-0"
+                                    placeholder="Write Blog Title" type="file">
+                            </div>
                         </div>
                     </div>
                     <!-- submit Button  -->

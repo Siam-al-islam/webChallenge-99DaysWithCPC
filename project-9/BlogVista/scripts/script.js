@@ -95,10 +95,41 @@ const closeBlogEditor = () => {
     blogEditorModal.classList.add("hidden")
 }
 
-//poster upload functionality
-let posterUploadBtn = document.querySelector(".posterImageInput");
+// ------------- post blog functionality ----------------
+
+let blogs = [];
+
+// image upload 
+let posterUploadBtn = document.querySelector("#imageInput");
 let posterImage = document.querySelector("#poster-photo");
+
+let authorImageInput = document.querySelector("#authorimageInput");
+let authorImage = document.querySelector("#author-image");
+
+// form informations 
+const blogTitle = document.querySelector("#blog-title");
+const blogCategory = document.querySelector("#blog-category");
+const blogDate = document.querySelector("#blog-date");
+const blogDescription = document.querySelector("#blog-description");
+const authorName = document.querySelector("#author-name");
+
+// input values 
+const blogTitleValue = blogTitle.value;
+const blogCategoryValue = blogCategory.value;
+const blogDateValue = blogDate.value;
+const blogDescriptionValue = blogDescription.value;
+const authorNameValue = authorName.value;
 
 posterUploadBtn.onchange = () => {
     posterImage.src = URL.createObjectURL(posterUploadBtn.files[0]);
 }
+
+authorImageInput.onchange = () => {
+    authorImage.src = URL.createObjectURL(authorImageInput.files[0]);
+}
+
+const postBtn = document.querySelector("#post-btn");
+
+postBtn.addEventListener('click', () => {
+    const blogData = {}
+})
