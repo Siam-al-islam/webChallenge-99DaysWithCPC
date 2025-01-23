@@ -31,8 +31,8 @@ const showBlogs = async () => {
                             ${blog.blog_title}
                         </h2>
                         <button data-index="${index}" id="read-more-btn" class="border transition-all mt-4 w-full text-white font-bold py-2 rounded-xl bg-[#000000]">Read More</button>
-                        <div class="flex items-center gap-5 text-[#97989F] mt-6">
-                            <div class="flex items-center gap-3">
+                        <div class="flex items-center justify-between text-[#97989F] mt-6">
+                            <div class="flex items-center">
                                 <img src="${blog.author_profile}" alt="">
                                 <h3>${blog.author_name}</h3>
                             </div>
@@ -113,13 +113,6 @@ const blogDate = document.querySelector("#blog-date");
 const blogDescription = document.querySelector("#blog-description");
 const authorName = document.querySelector("#author-name");
 
-// input values 
-const blogTitleValue = blogTitle.value;
-const blogCategoryValue = blogCategory.value;
-const blogDateValue = blogDate.value;
-const blogDescriptionValue = blogDescription.value;
-const authorNameValue = authorName.value;
-
 posterUploadBtn.onchange = () => {
     posterImage.src = URL.createObjectURL(posterUploadBtn.files[0]);
 }
@@ -129,7 +122,49 @@ authorImageInput.onchange = () => {
 }
 
 const postBtn = document.querySelector("#post-btn");
+const userPostsContainer = document.querySelector("#user-posts-container");
 
 postBtn.addEventListener('click', () => {
-    const blogData = {}
+    const blogData = {
+        poster: posterImage.src,
+        title: blogTitle.value,
+        category: blogCategory.value,
+        date: blogDate.value,
+        description: blogDescription.value,
+        author: authorName.value,
+        author_image: authorImage.src
+    };
+
+    blogs.push(blogData);
+    console.log(blogs);
+
+    blogs.forEach((blog, index) => {
+        const blogsStr = `
+                <div class="border border-[#E8E8EA] rounded-xl p-4 w-full blog-card">
+                    <div class="blog-image-wrapper">
+                        <img class="rounded-md w-full object-cover blog-image max-h-[250px]" src="${blog.poster ? blog.poster : "https://i.ibb.co.com/p0tnG2v/360-F-470299797-UD0eo-VMMSUb-HCc-NJCdv2t8-B2g1-GVq-Ygs.jpg"}" alt="">
+                    </div>
+                    <div class="mt-6">
+                        <h3 class="text-xs text-[#4B6BFB] bg-[#4b6bfb10] px-3 py-1 rounded-md w-fit font-medium">
+                            ${blog.category ? blog.category : "No category"}
+                        </h3>
+                        <h2 class="mt-4 font-semibold text-2xl">
+                            ${blog.title ? blog.title : "No Title"}
+                        </h2>
+                        <button data-index="${index}" id="read-more-btn" class="border transition-all mt-4 w-full text-white font-bold py-2 rounded-xl bg-[#000000]">Read More</button>
+                        <div class="flex items-center justify-between text-[#97989F] mt-6">
+                            <div class="flex items-center">
+                                <img class="h-12 w-12 rounded-full" src="${blog.author_image ? blog.author_image : "https://i.ibb.co.com/3d2f5sB/user-profile-icon-vector-avatar-600nw-2220431045.webp"}" alt="">
+                                <h3>${blog.author ? blog.author : "User"}</h3>
+                            </div>
+                            <div>
+                                <h2>${blog.date ? blog.date : "No Date"}</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+        userPostsContainer.insertAdjacentHTML('beforeend', blogsStr);
+    })
 })
