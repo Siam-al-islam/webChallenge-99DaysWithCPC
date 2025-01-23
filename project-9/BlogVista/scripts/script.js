@@ -32,7 +32,7 @@ const showBlogs = async () => {
                         </h2>
                         <button data-index="${index}" id="read-more-btn" class="border transition-all mt-4 w-full text-white font-bold py-2 rounded-xl bg-[#000000]">Read More</button>
                         <div class="flex items-center justify-between text-[#97989F] mt-6">
-                            <div class="flex items-center">
+                            <div class="flex gap-3 items-center">
                                 <img src="${blog.author_profile}" alt="">
                                 <h3>${blog.author_name}</h3>
                             </div>
@@ -121,10 +121,12 @@ authorImageInput.onchange = () => {
 
 const postBtn = document.querySelector("#post-btn");
 const userPostsContainer = document.querySelector("#user-posts-container");
+const userSection = document.querySelector("#user-section");
 let blogs = [];
 
 postBtn.addEventListener('click', () => {
     blogEditorModal.classList.add("hidden");
+    userSection.classList.remove("hidden")
 
     const blogData = {
         poster: posterImage.src,
@@ -156,7 +158,7 @@ postBtn.addEventListener('click', () => {
                         </h2>
                         <button data-index="${index}" id="read-more-btn" class="border transition-all mt-4 w-full text-white font-bold py-2 rounded-xl bg-[#000000]">Read More</button>
                         <div class="flex items-center justify-between text-[#97989F] mt-6">
-                            <div class="flex items-center">
+                            <div class="flex gap-3 items-center">
                                 <img class="h-12 w-12 rounded-full" src="${blog.author_image ? blog.author_image : "https://i.ibb.co.com/3d2f5sB/user-profile-icon-vector-avatar-600nw-2220431045.webp"}" alt="">
                                 <h3>${blog.author ? blog.author : "User"}</h3>
                             </div>
