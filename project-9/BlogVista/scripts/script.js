@@ -143,9 +143,9 @@ postBtn.addEventListener('click', () => {
 
     userPostsContainer.innerHTML = "";
 
-    blogs.forEach((blog, index) => {
+    blogs.forEach((blog) => {
         const blogsStr = `
-                <div class="border border-[#E8E8EA] rounded-xl p-4 w-full blog-card">
+                <div class="border border-[#E8E8EA] rounded-xl p-4 w-full h-fit blog-card">
                     <div class="blog-image-wrapper">
                         <img class="rounded-md w-full object-cover blog-image max-h-[250px]" src="${blog.poster ? blog.poster : "https://i.ibb.co.com/p0tnG2v/360-F-470299797-UD0eo-VMMSUb-HCc-NJCdv2t8-B2g1-GVq-Ygs.jpg"}" alt="">
                     </div>
@@ -156,7 +156,7 @@ postBtn.addEventListener('click', () => {
                         <h2 class="mt-4 font-semibold text-2xl">
                             ${blog.title ? blog.title : "No Title"}
                         </h2>
-                        <button data-index="${index}" id="read-more-btn" class="border transition-all mt-4 w-full text-white font-bold py-2 rounded-xl bg-[#000000]">Read More</button>
+                        <p class="mt-3">${blog.description ? blog.description : "Not described"}</p>
                         <div class="flex items-center justify-between text-[#97989F] mt-6">
                             <div class="flex gap-3 items-center">
                                 <img class="h-12 w-12 rounded-full" src="${blog.author_image ? blog.author_image : "https://i.ibb.co.com/3d2f5sB/user-profile-icon-vector-avatar-600nw-2220431045.webp"}" alt="">
