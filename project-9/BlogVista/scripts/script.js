@@ -156,7 +156,7 @@ postBtn.addEventListener('click', () => {
                         <h2 class="mt-4 font-semibold text-2xl">
                             ${blog.title ? blog.title : "No Title"}
                         </h2>
-                        <p class="mt-3">${blog.description ? blog.description : "Not described"}</p>
+                        <p class="mt-3">${blog.description ? blog.description.slice(0, 70) + "..." : "Not described"}</p>
                         <div class="flex items-center justify-between text-[#97989F] mt-6">
                             <div class="flex gap-3 items-center">
                                 <img class="h-12 w-12 rounded-full" src="${blog.author_image ? blog.author_image : "https://i.ibb.co.com/3d2f5sB/user-profile-icon-vector-avatar-600nw-2220431045.webp"}" alt="">
