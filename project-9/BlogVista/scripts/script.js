@@ -150,16 +150,19 @@ postBtn.addEventListener('click', () => {
                         <img class="rounded-md w-full object-cover blog-image max-h-[250px]" src="${blog.poster ? blog.poster : "https://i.ibb.co.com/p0tnG2v/360-F-470299797-UD0eo-VMMSUb-HCc-NJCdv2t8-B2g1-GVq-Ygs.jpg"}" alt="">
                     </div>
                     <div class="mt-6">
-                        <h3 class="text-xs text-[#4B6BFB] bg-[#4b6bfb10] px-3 py-1 rounded-md w-fit font-medium">
+                        <h3 class="text-xs text-[#4B6BFB] bg-[#4b6bfb10] px-3 py-1 rounded-md w-fit font-medium capitalize">
                             ${blog.category ? blog.category : "No category"}
                         </h3>
-                        <h2 class="mt-4 font-semibold text-2xl">
+                        <h2 class="mt-4 font-semibold text-2xl capitalize">
                             ${blog.title ? blog.title : "No Title"}
                         </h2>
-                        <p class="mt-3">${blog.description ? blog.description.slice(0, 70) + "..." : "Not described"}</p>
+                        <div class="flex gap-3 items-center justify-between mt-3 flex-wrap"> 
+                            <p class="capitalize">${blog.description ? blog.description.slice(0, 70) + "..." : "Not described"}</p>
+                            <a class="text-[#4B6BFB] text-xs font-bold cursor-pointer">Read More</a>
+                        </div>
                         <div class="flex items-center justify-between text-[#97989F] mt-6">
                             <div class="flex gap-3 items-center">
-                                <img class="h-12 w-12 rounded-full" src="${blog.author_image ? blog.author_image : "https://i.ibb.co.com/3d2f5sB/user-profile-icon-vector-avatar-600nw-2220431045.webp"}" alt="">
+                                <img class="h-12 w-12 rounded-full object-cover" src="${blog.author_image ? blog.author_image : "https://i.ibb.co.com/3d2f5sB/user-profile-icon-vector-avatar-600nw-2220431045.webp"}" alt="">
                                 <h3>${blog.author ? blog.author : "User"}</h3>
                             </div>
                             <div>
