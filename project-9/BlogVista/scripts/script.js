@@ -122,9 +122,11 @@ authorImageInput.onchange = () => {
 const postBtn = document.querySelector("#post-btn");
 const userPostsContainer = document.querySelector("#user-posts-container");
 const userSection = document.querySelector("#user-section");
+const blogCount = document.querySelector("#blogs-count");
 let blogs = [];
 
 postBtn.addEventListener('click', () => {
+    blogCount.innerHTML = blogs.length + 1;
     blogEditorModal.classList.add("hidden");
     userSection.classList.remove("hidden")
 
@@ -145,11 +147,11 @@ postBtn.addEventListener('click', () => {
 
     blogs.forEach((blog) => {
         const blogsStr = `
-                <div class="border border-[#E8E8EA] rounded-xl p-4 w-full h-fit blog-card">
+                <div class="border border-[#E8E8EA] rounded-xl p-4 w-full blog-card">
                     <div class="blog-image-wrapper">
                         <img class="rounded-md w-full object-cover blog-image max-h-[250px]" src="${blog.poster ? blog.poster : "https://i.ibb.co.com/p0tnG2v/360-F-470299797-UD0eo-VMMSUb-HCc-NJCdv2t8-B2g1-GVq-Ygs.jpg"}" alt="">
                     </div>
-                    <div class="mt-6">
+                    <div class="mt-6 mb-4">
                         <h3 class="text-xs text-[#4B6BFB] bg-[#4b6bfb10] px-3 py-1 rounded-md w-fit font-medium capitalize">
                             ${blog.category ? blog.category : "No category"}
                         </h3>
@@ -170,9 +172,19 @@ postBtn.addEventListener('click', () => {
                             </div>
                         </div>
                     </div>
+                    <btn id="deleteBtn" class="bg-red-500 text-white py-2 rounded-xl w-full flex items-center gap-3 justify-center cursor-pointer font-bold">Delete Blog <svg class="w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M135.2 17.7L128 32 32 32C14.3 32 0 46.3 0 64S14.3 96 32 96l384 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-96 0-7.2-14.3C307.4 6.8 296.3 0 284.2 0L163.8 0c-12.1 0-23.2 6.8-28.6 17.7zM416 128L32 128 53.2 467c1.6 25.3 22.6 45 47.9 45l245.8 0c25.3 0 46.3-19.7 47.9-45L416 128z"/></svg></btn>
                 </div>
             `;
 
         userPostsContainer.insertAdjacentHTML('beforeend', blogsStr);
+
+        const deleteBtn = document.querySelectorAll("#deleteBtn");
+        deleteBtn.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.target.closest('.blog-card').remove();
+                blogCount.innerHTML = blogs.length - 1;
+            })
+        })
+
     })
 })
