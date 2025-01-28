@@ -126,7 +126,7 @@ const blogCount = document.querySelector("#blogs-count");
 let blogs = [];
 
 postBtn.addEventListener('click', () => {
-    blogCount.innerHTML = blogs.length + 1;
+    blogCount.innerHTML = blogs.length;
     blogEditorModal.classList.add("hidden");
     userSection.classList.remove("hidden")
 
@@ -141,7 +141,6 @@ postBtn.addEventListener('click', () => {
     };
 
     blogs.push(...[blogData]);
-    console.log(blogs);
 
     userPostsContainer.innerHTML = "";
 
@@ -178,11 +177,14 @@ postBtn.addEventListener('click', () => {
 
         userPostsContainer.insertAdjacentHTML('beforeend', blogsStr);
 
+        // read more functionality
+        const readMoreBtn = document.querySelectorAll("a");
+
+        // delete functionality
         const deleteBtn = document.querySelectorAll("#deleteBtn");
         deleteBtn.forEach(btn => {
             btn.addEventListener('click', (e) => {
                 e.target.closest('.blog-card').remove();
-                blogCount.innerHTML = blogs.length - 1;
             })
         })
 
