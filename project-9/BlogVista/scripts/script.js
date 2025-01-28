@@ -144,7 +144,7 @@ postBtn.addEventListener('click', () => {
 
     userPostsContainer.innerHTML = "";
 
-    blogs.forEach((blog) => {
+    blogs.forEach((blog, index) => {
         const blogsStr = `
                 <div class="border border-[#E8E8EA] rounded-xl p-4 w-full blog-card">
                     <div class="blog-image-wrapper">
@@ -159,7 +159,7 @@ postBtn.addEventListener('click', () => {
                         </h2>
                         <div class="flex gap-3 items-center justify-between mt-3 flex-wrap"> 
                             <p class="capitalize">${blog.description ? blog.description.slice(0, 70) + "..." : "Not described"}</p>
-                            <a class="text-[#4B6BFB] text-xs font-bold cursor-pointer">Read More</a>
+                            <a data-index="${index}" class="text-[#4B6BFB] text-xs font-bold cursor-pointer">Read More</a>
                         </div>
                         <div class="flex items-center justify-between text-[#97989F] mt-6">
                             <div class="flex gap-3 items-center">
@@ -178,13 +178,40 @@ postBtn.addEventListener('click', () => {
         userPostsContainer.insertAdjacentHTML('beforeend', blogsStr);
 
         // read more functionality
-        const readMoreBtn = document.querySelectorAll("a");
+        document.querySelectorAll("a").forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const blogIndex = e.target.dataset.index;
+                const blog = blogs[blogIndex];
+
+                blogContent.innerHTML = `
+                    <div class="transition">
+                        <h1 class="text-2xl font-bold">Blog Details</h1>
+                        <img class="w-full mt-6" src="${blog.poster}" alt="">
+                        <h3 class="text-[#4B6BFB] bg-[#4b6bfb10] px-3 py-1 rounded-md w-fit font-medium mt-4">
+                                ${blog.category}
+                        </h3>
+                        <h2 class="mt-5 font-semibold text-2xl">${blog.title}</h2>
+                        <p class="mt-3">${blog.description}</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-3 mt-5">
+                                <img class="w-8 h-8 rounded-full" src="${blog.author_name}" alt="">
+                                <h3>${blog.author}</h3>
+                            </div>
+                            <h4 class="text-[#97989F] mt-2">${blog.date}</h4>
+                        </div>
+                    </div> `;
+
+                modal.classList.remove("hidden");
+            })
+        })
 
         // delete functionality
         const deleteBtn = document.querySelectorAll("#deleteBtn");
         deleteBtn.forEach(btn => {
             btn.addEventListener('click', (e) => {
-                e.target.closest('.blog-card').remove();
+                // e.target.closest('.blog-card').remove();
+                blogs.splice(e.target.dataset.index, 1);
+
             })
         })
 
