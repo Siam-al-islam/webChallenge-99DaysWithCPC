@@ -194,7 +194,7 @@ postBtn.addEventListener('click', () => {
                         <p class="mt-3">${blog.description}</p>
                         <div class="flex items-center justify-between">
                             <div class="flex items-center gap-3 mt-5">
-                                <img class="w-8 h-8 rounded-full" src="${blog.author_name}" alt="">
+                                <img class="w-8 h-8 rounded-full" src="${blog.author_image}" alt="">
                                 <h3>${blog.author}</h3>
                             </div>
                             <h4 class="text-[#97989F] mt-2">${blog.date}</h4>
