@@ -126,7 +126,7 @@ const blogCount = document.querySelector("#blogs-count");
 let blogs = [];
 
 postBtn.addEventListener('click', () => {
-    blogCount.innerHTML = blogs.length;
+    blogCount.innerHTML = blogs.length + 1;
     blogEditorModal.classList.add("hidden");
     userSection.classList.remove("hidden")
 
