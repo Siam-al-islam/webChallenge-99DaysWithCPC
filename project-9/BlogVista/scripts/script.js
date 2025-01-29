@@ -186,7 +186,7 @@ postBtn.addEventListener('click', () => {
                 blogContent.innerHTML = `
                     <div class="transition">
                         <h1 class="text-2xl font-bold">Blog Details</h1>
-                        <img class="w-full mt-6" src="${blog.poster}" alt="">
+                        <img class="w-full h-[250px] object-cover mt-6" src="${blog.poster}" alt="">
                         <h3 class="text-[#4B6BFB] bg-[#4b6bfb10] px-3 py-1 rounded-md w-fit font-medium mt-4">
                                 ${blog.category}
                         </h3>
@@ -209,9 +209,9 @@ postBtn.addEventListener('click', () => {
         const deleteBtn = document.querySelectorAll("#deleteBtn");
         deleteBtn.forEach(btn => {
             btn.addEventListener('click', (e) => {
-                // e.target.closest('.blog-card').remove();
-                blogs.splice(e.target.dataset.index, 1);
-
+                e.target.closest('.blog-card').remove();
+                blogs.splice(index, 1);
+                blogCount.innerHTML = blogs.length;
             })
         })
 
