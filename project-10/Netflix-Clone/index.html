@@ -14,6 +14,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
     <!-- tailwind css link -->
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
@@ -57,8 +59,8 @@
             </div>
     </section>
     <!-- trending movies -->
-    <section>
-        <div class="max-w-screen-xl mx-auto mt-12">
+    <section class="max-w-screen-xl mx-auto mt-12">
+        <div class="">
             <h1 class="text-white text-4xl font-bold">Trending Now</h1>
         </div>
         <div class="mt-10">
@@ -81,6 +83,19 @@
     </section>
 
 
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    </script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
 </body>
