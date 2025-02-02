@@ -43,3 +43,11 @@ body {
     height: 100%;
     object-fit: cover;
 }
+
+.card {
+    width: 100%;
+    height: 327px;
+    padding: 24px 16px;
+    border-radius: 15px;
+    background: linear-gradient(149deg, #192247 0%, #210e17 96.86%);
+}
