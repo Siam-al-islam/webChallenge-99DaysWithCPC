@@ -7,3 +7,17 @@ var swiper = new Swiper(".mySwiper", {
         clickable: true,
     },
 });
+
+//
+const faqs = document.querySelectorAll("#faq");
+const accordion = document.querySelectorAll("#accordion");
+
+faqs.forEach((faq) => {
+    faq.addEventListener("click", () => {
+        accordion.forEach((acc) => {
+            if (acc.classList.contains("active")) {
+                acc.classList.remove("active");
+            }
+        });
+    });
+});
