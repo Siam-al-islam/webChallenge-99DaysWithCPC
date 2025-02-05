@@ -51,8 +51,3 @@ body {
     border-radius: 15px;
     background: linear-gradient(149deg, #192247 0%, #210e17 96.86%);
 }
-
-
-.active {
-    display: block;
-}
